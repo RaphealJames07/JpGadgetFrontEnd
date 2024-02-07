@@ -1,4 +1,310 @@
 /* src/styles/index.css */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.root,
+#root {
+    --Jp-primary-color: #008081;
+    --Jp-bold-text-color: #232323;
+    --Jp-normal-text-color: #787878;
+    --Jp-gray-color: #f2f2f2;
+    --Jp-white-color: #fff;
+    --Jp-yellow-touch-color: #ffd800;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.toggle-dropdown {
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out,
+        visibility 0.25s ease-in-out;
+    will-change: transform;
+}
+.toggle-dropdown.active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.8s cubic-bezier(0, 1, 0.4, 1),
+        transform 0.8s cubic-bezier(0.18, 1.25, 0.4, 1), visibility 0.4s linear;
+    transform: scale(1);
+}
+
+._desktop_user_info #user-notification .customer.login {
+    max-width: 100%;
+    padding: 0;
+    box-shadow: none;
+    margin-bottom: 0;
+}
+#user-notification {
+    position: absolute;
+    right: 0;
+    left: auto;
+    text-align: left;
+    width: max-content;
+    z-index: 9;
+    overflow: hidden;
+}
+
+.ishi-panel-data {
+    visibility: hidden;
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+        visibility 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+}
+.ishi-panel-data-slide {
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+}
+.ishi-panel-data-default {
+    transform: translateX(-100%);
+}
+.ishi-panel-data.active {
+    transform: translateX(0);
+    visibility: visible;
+    position: unset;
+}
+
+._desktop_user_info #user-notification .customer.login {
+    max-width: 100%;
+    padding: 0;
+    box-shadow: none;
+    margin-bottom: 0;
+}
+._desktop_user_info #user-notification .customer.login h2 {
+    margin-top: 0;
+}
+._desktop_user_info #user-notification .customer.login .forgot {
+    float: right;
+    display: block;
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+._desktop_user_info #user-notification .customer.login p {
+    margin-bottom: 0;
+    color: #232323;
+}
+._desktop_user_info #user-notification .customer.login form {
+    margin-top: 20px;
+}
+._desktop_user_info #user-notification .customer.login .btn {
+    display: block;
+    float: none;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+._desktop_user_info #user-notification .customer.login #create_customer .btn {
+    margin-top: 20px;
+}
+._desktop_user_info #user-notification .customer.login button {
+    margin: 15px 0 0;
+    display: block;
+    width: 100%;
+}
+._desktop_user_info #user-notification .customer.login .field input {
+    padding: 10px;
+    height: 4rem;
+}
+._desktop_user_info
+    #user-notification
+    .customer.login
+    .field
+    input:-webkit-autofill,
+._desktop_user_info #user-notification .customer.login .field input:focus,
+._desktop_user_info
+    #user-notification
+    .customer.login
+    .field
+    input:not(:placeholder-shown),
+._desktop_user_info
+    #user-notification
+    .customer.login
+    .field
+    input:-webkit-autofill {
+    padding: 1.7rem 1.5rem 0.8rem;
+}
+._desktop_user_info #user-notification .customer.login .field label {
+    top: 1rem;
+}
+._desktop_user_info
+    #user-notification
+    .customer.login
+    .field
+    input:-webkit-autofill
+    ~ label,
+._desktop_user_info
+    #user-notification
+    .customer.login
+    .field
+    input:focus
+    ~ label,
+._desktop_user_info
+    #user-notification
+    .customer.login
+    .field
+    input:not(:placeholder-shown)
+    ~ label {
+    top: 0.2rem;
+}
+._desktop_user_info #user-notification .customer.login .field {
+    margin: 1.5rem 0 0 0;
+}
+._desktop_user_info .userinfo-title {
+    cursor: pointer;
+    display: block;
+}
+
+.ant-drawer-header-title{
+    justify-content: end;
+}
+.ant-drawer-body{
+    padding: 0 !important;
+  }
+
+  .owl-carousel,.owl-carousel .owl-item {
+    -webkit-tap-highlight-color: transparent;
+    position: relative
+}
+
+.owl-carousel {
+    display: none;
+    width: 100%;
+    z-index: 1
+}
+
+.owl-carousel .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+    touch-action: manipulation;
+    -moz-backface-visibility: hidden
+}
+
+.owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0
+}
+
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    -webkit-transform: translate3d(0,0,0)
+}
+
+.owl-carousel .owl-item,.owl-carousel .owl-wrapper {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0)
+}
+
+.owl-carousel .owl-item {
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-touch-callout: none
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+    width: 100%
+}
+
+.owl-carousel .owl-dots.disabled,.owl-carousel .owl-nav.disabled {
+    display: none
+}
+
+.no-js .owl-carousel,.owl-carousel.owl-loaded {
+    display: block
+}
+
+.owl-carousel .owl-dot,.owl-carousel .owl-nav .owl-next,.owl-carousel .owl-nav .owl-prev {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.owl-carousel .owl-nav button.owl-next,.owl-carousel .owl-nav button.owl-prev,.owl-carousel button.owl-dot {
+    background: 0 0;
+    color: inherit;
+    border: none;
+    padding: 0!important;
+    font: inherit
+}
+
+.owl-carousel.owl-loading {
+    opacity: 0;
+    display: block
+}
+
+.owl-carousel.owl-hidden {
+    opacity: 0
+}
+
+.owl-carousel.owl-refresh .owl-item {
+    visibility: hidden
+}
+
+.owl-carousel.owl-drag .owl-item {
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.owl-carousel.owl-grab {
+    cursor: move;
+    cursor: grab
+}
+
+.owl-carousel.owl-rtl {
+    direction: rtl
+}
+
+.owl-carousel.owl-rtl .owl-item {
+    float: right
+}
+
+.owl-carousel .animated {
+    animation-duration: 1s;
+    animation-fill-mode: both
+}
+
+.owl-carousel .owl-animated-in {
+    z-index: 0
+}
+
+.owl-carousel .owl-animated-out {
+    z-index: 1
+}
+
+.owl-carousel .fadeOut {
+    animation-name: fadeOut
+}

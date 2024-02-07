@@ -1,0 +1,9 @@
+.root,
+#root {
+    --Jp-primary-color: #008081;
+    --Jp-bold-text-color: #232323;
+    --Jp-normal-text-color: #787878;
+    --Jp-gray-color: #f2f2f2;
+    --Jp-white-color: #fff;
+    --Jp-yellow-touch-color: #ffd800;
+}

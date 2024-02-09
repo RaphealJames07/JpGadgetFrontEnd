@@ -1,9 +1,14 @@
 import {useState} from "react";
 import {FaCaretDown} from "react-icons/fa";
 
-const HeaderOne = () => {
+interface Props {
+    setShowAuth: React.Dispatch<React.SetStateAction<boolean>>;
+    showAuth: boolean;
+}
+
+const HeaderOne: React.FC<Props> = ({showAuth, setShowAuth}) => {
     const [languageDropdown, setlanguageDropdown] = useState<boolean>(false);
-    const [showAuth, setShowAuth] = useState<boolean>(false);
+    // const [showAuth, setShowAuth] = useState<boolean>(false);
     const [showLogin, setShowLogin] = useState<boolean>(true);
     const [showForgetPwd, setShowForgetPwd] = useState<boolean>(false);
     const [showSignUp, setShowSignUp] = useState<boolean>(false);
@@ -173,7 +178,7 @@ const HeaderOne = () => {
                         Wishlist
                     </p>
                     <p
-                        className="transition-all duration-300 phone:hidden cursor-pointer hover:text-gray-300 flex items-center gap-2 relative"
+                        className="transition-all duration-300 phone:hidden cursor-pointer hover:text-gray-300 flex items-center gap-2 relative z-30"
                         onClick={() => setlanguageDropdown(!languageDropdown)}
                     >
                         English{" "}

@@ -4,7 +4,10 @@ import scrollbarPlugin from "tailwind-scrollbar";
 export default {
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
-        extend: {},
+        extend: { scrollbar: {
+            // Apply overflow hidden to hide the scrollbar
+            'hide': { 'overflow': 'hidden' }
+          }},
         screens: {
             phone: {max: "480px"},
             tab: {max: "991px"},

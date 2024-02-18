@@ -5,20 +5,36 @@ import HeaderOne from "../Components/HeaderOne";
 import HeaderTwo from "../Components/HeaderTwo";
 import Hero from "../Components/Hero";
 import SubHero from "../Components/SubHero";
+import HomeShop from "../Components/HomeShop";
+import QuickView from "../Components/QuickView";
+import {Modal} from "antd";
 
 const Home = () => {
     const [showAuth, setShowAuth] = useState<boolean>(false);
+    const [showInfo, setShowInfo] = useState<boolean>(false);
 
     return (
         <>
-            <div className="w-full h-max">
+            <div className="w-full h-max relative ">
                 <div className="w-full h-max">
                     <HeaderOne setShowAuth={setShowAuth} showAuth={showAuth} />
                     <HeaderTwo setShowAuth={setShowAuth} showAuth={showAuth} />
-                    <Hero/>
-                    <SubHero/>
+                    <Hero />
+                    <SubHero />
+                    <HomeShop setShowInfo={setShowInfo} />
                 </div>
             </div>
+            <Modal
+                open={showInfo}
+                cancelButtonProps={{hidden: true}}
+                okButtonProps={{hidden: true}}
+                // closeIcon={false}
+                onCancel={() => setShowInfo(false)}
+                width={1000}
+                style={{top: "80px"}}
+            >
+                <QuickView />
+            </Modal>
         </>
     );
 };

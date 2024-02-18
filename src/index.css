@@ -20,6 +20,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.hiddenScrollBar{
+    overflow: hidden !important;
+}
+
 .heroBg1B {
     background-image: url(./assets/herobgimg1B.webp);
     background-size: cover;
@@ -368,4 +373,15 @@
 .owl-carousel.owl-grabbed {
     cursor: grabbed;
     cursor: -webkit-grabbed;
+}
+
+.h3textBg::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    width: 40px;
+    height: 40px;
+    z-index: -1;
+    background: #2f904f;
+    border-radius: 80% 30% 40% 80%/65% 50% 35% 60%;
 }

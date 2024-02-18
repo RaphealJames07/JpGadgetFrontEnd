@@ -10,10 +10,10 @@ const SubHero = () => {
 
     return (
         <>
-            <div className="w-full h-80 phone:h-96 p-5 phone:p-3">
-                <div className="w-full h-full flex phone:flex-col gap-5">
+            <div className="w-full h-max p-5 phone:p-3">
+                <div className="w-full h-max flex phone:flex-col gap-5">
                     <div
-                        className="w-1/3 h-full phone:w-full bg-[#a9d2ab] rounded-md relative"
+                        className="w-1/3 phone:w-full h-60 phone:h-60 bg-[#a9d2ab] rounded-md relative"
                         onMouseEnter={() => setHoverA(true)}
                         onMouseLeave={() => setHoverA(false)}
                     >
@@ -44,7 +44,7 @@ const SubHero = () => {
                         </div>
                     </div>
                     <div
-                        className="w-1/3 h-full phone:w-full bg-[#cac0ef] rounded-md relative"
+                        className="w-1/3 h-60 phone:h-60 phone:w-full bg-[#cac0ef] rounded-md relative"
                         onMouseEnter={() => setHoverB(true)}
                         onMouseLeave={() => setHoverB(false)}
                     >
@@ -75,7 +75,7 @@ const SubHero = () => {
                         </div>
                     </div>
                     <div
-                        className="w-1/3 h-full phone:w-full bg-[#ff915a] rounded-md relative"
+                        className="w-1/3 h-60 phone:h-60 phone:w-full bg-[#ff915a] rounded-md relative"
                         onMouseEnter={() => setHoverC(true)}
                         onMouseLeave={() => setHoverC(false)}
                     >

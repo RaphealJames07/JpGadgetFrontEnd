@@ -200,12 +200,11 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import {Fade} from "react-awesome-reveal";
 
 const Test = () => {
-    
     const owlOptions = {
         loop: true,
         autoWidth: false,
         items: 1,
-        autoplay: true,
+        autoplay: false,
         autoplayTimeout: 5000,
         mergeFit: true,
         stagePadding: 0,
@@ -227,13 +226,10 @@ const Test = () => {
         // },
     };
 
-
-
-
     return (
         <div className="relative">
-            <OwlCarousel {...owlOptions} className="w-full " >
-                <div className="item w-full h-[80vh] ">
+            <OwlCarousel {...owlOptions} className="w-full ">
+                <div className="item w-full h-[80vh] phone:h-[50vh] ">
                     <div className="w-full h-full bg-sky-200">
                         <div className="heroBg1 heroBg1B phone:flex-col flex items-center w-full">
                             <div className="w-1/2 phone:w-full h-max phone:h-full  flex justify-center ">
@@ -264,7 +260,7 @@ const Test = () => {
                         </div>
                     </div>
                 </div>
-                <div className="item w-full h-[80vh] ">
+                <div className="item w-full h-[80vh] phone:h-[50vh] ">
                     <div className="w-full h-full bg-red-200">
                         <div className="heroBg2 heroBg2B phone:flex-col flex items-center">
                             <div className="w-1/2 h-max flex justify-center"></div>
@@ -295,7 +291,7 @@ const Test = () => {
                         </div>
                     </div>
                 </div>
-                <div className="item w-full h-[80vh] ">
+                <div className="item w-full h-[80vh] phone:h-[50vh] ">
                     <div className="w-full h-full bg-green-200">
                         <div className="heroBg3 heroBg3B phone:flex-col flex items-center">
                             <div className="w-1/2 h-max flex justify-center"></div>
@@ -326,7 +322,7 @@ const Test = () => {
                         </div>
                     </div>
                 </div>
-                <div className="item w-full h-[80vh] ">
+                <div className="item w-full h-[80vh] phone:h-[50vh] ">
                     <div className="w-full h-full bg-yellow-200">
                         <div className="heroBg4 heroBg4B phone:flex-col flex items-center">
                             <div className="w-1/2 h-max flex justify-center"></div>
@@ -364,4 +360,3 @@ const Test = () => {
 };
 
 export default Test;
-

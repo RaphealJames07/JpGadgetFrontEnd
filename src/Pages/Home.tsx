@@ -5,7 +5,7 @@ import HeaderOne from "../Components/HeaderOne";
 import HeaderTwo from "../Components/HeaderTwo";
 import Hero from "../Components/Hero";
 import SubHero from "../Components/SubHero";
-import HomeShop from "../Components/HomeShop";
+// import HomeShop from "../Components/HomeShop";
 import QuickView from "../Components/QuickView";
 import {Modal} from "antd";
 import PopularCat from "../Components/PopularCol";
@@ -13,6 +13,7 @@ import Latest from "../Components/Latest";
 import DealOfTheDay from "../Components/DealOfTheDay";
 import BigDiscount from "../Components/BigDiscount";
 import ShopSafely from "../Components/ShopSafely";
+import HomeShopTwo from "../Components/HomeShopTwo";
 
 const Home = () => {
     const [showAuth, setShowAuth] = useState<boolean>(false);
@@ -26,7 +27,8 @@ const Home = () => {
                     <HeaderTwo setShowAuth={setShowAuth} showAuth={showAuth} />
                     <Hero />
                     <SubHero />
-                    <HomeShop setShowInfo={setShowInfo} />
+                    {/* <HomeShop setShowInfo={setShowInfo} /> */}
+                    <HomeShopTwo setShowInfo={setShowInfo}/>
                     <DealOfTheDay />
                     <PopularCat />
                     <Latest setShowInfo={setShowInfo} />

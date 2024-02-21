@@ -8,6 +8,11 @@ import SubHero from "../Components/SubHero";
 import HomeShop from "../Components/HomeShop";
 import QuickView from "../Components/QuickView";
 import {Modal} from "antd";
+import PopularCat from "../Components/PopularCol";
+import Latest from "../Components/Latest";
+import DealOfTheDay from "../Components/DealOfTheDay";
+import BigDiscount from "../Components/BigDiscount";
+import ShopSafely from "../Components/ShopSafely";
 
 const Home = () => {
     const [showAuth, setShowAuth] = useState<boolean>(false);
@@ -22,6 +27,11 @@ const Home = () => {
                     <Hero />
                     <SubHero />
                     <HomeShop setShowInfo={setShowInfo} />
+                    <DealOfTheDay />
+                    <PopularCat />
+                    <Latest setShowInfo={setShowInfo} />
+                    <BigDiscount />
+                    <ShopSafely />
                 </div>
             </div>
             <Modal

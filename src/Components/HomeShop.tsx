@@ -52,7 +52,7 @@ const HomeShop: React.FC<Props> = ({ setShowInfo}) => {
 
     return (
         <>
-            <div className="w-full h-max flex items-center justify-center flex-col gap-10 my-5 px-5 phone:px-3">
+            <div className="w-full h-max flex items-center justify-center flex-col gap-10 my-10 px-5 phone:px-3">
                 <p className="text-3xl font-semibold flex items-center justify-center relative h3textBg">
                     Trending Products
                 </p>

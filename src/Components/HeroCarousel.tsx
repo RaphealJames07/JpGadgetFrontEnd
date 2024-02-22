@@ -198,6 +198,7 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import {Fade} from "react-awesome-reveal";
+import './HeroCarousel.css'
 
 const Test = () => {
     const owlOptions = {
@@ -213,17 +214,18 @@ const Test = () => {
         dots: true,
         margin: 0,
         nav: true,
-        // responsive: {
-        //     0: {
-        //         items: 1,
-        //     },
-        //     600: {
-        //         items: 3,
-        //     },
-        //     1000: {
-        //         items: 1,
-        //     },
-        // },
+        responsive: {
+            0: {
+                items: 1,
+                nav: false,
+            },
+            600: {
+                items: 1,
+            },
+            1000: {
+                items: 1,
+            },
+        },
     };
 
     return (

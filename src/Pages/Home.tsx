@@ -14,6 +14,7 @@ import DealOfTheDay from "../Components/DealOfTheDay";
 import BigDiscount from "../Components/BigDiscount";
 import ShopSafely from "../Components/ShopSafely";
 import HomeShopTwo from "../Components/HomeShopTwo";
+import LatestNews from "../Components/LatestNews";
 
 const Home = () => {
     const [showAuth, setShowAuth] = useState<boolean>(false);
@@ -28,12 +29,13 @@ const Home = () => {
                     <Hero />
                     <SubHero />
                     {/* <HomeShop setShowInfo={setShowInfo} /> */}
-                    <HomeShopTwo setShowInfo={setShowInfo}/>
+                    <HomeShopTwo setShowInfo={setShowInfo} />
                     <DealOfTheDay />
                     <PopularCat />
                     <Latest setShowInfo={setShowInfo} />
                     <BigDiscount />
                     <ShopSafely />
+                    <LatestNews />
                 </div>
             </div>
             <Modal

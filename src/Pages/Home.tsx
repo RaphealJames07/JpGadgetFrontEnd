@@ -15,6 +15,7 @@ import BigDiscount from "../Components/BigDiscount";
 import ShopSafely from "../Components/ShopSafely";
 import HomeShopTwo from "../Components/HomeShopTwo";
 import LatestNews from "../Components/LatestNews";
+import Footer from "../Components/Footer";
 
 const Home = () => {
     const [showAuth, setShowAuth] = useState<boolean>(false);
@@ -36,6 +37,7 @@ const Home = () => {
                     <BigDiscount />
                     <ShopSafely />
                     <LatestNews />
+                    <Footer />
                 </div>
             </div>
             <Modal

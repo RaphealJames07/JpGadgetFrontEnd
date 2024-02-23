@@ -1,4 +1,4 @@
-import logo from "../assets/Logo3.svg";
+import logos from "../assets/Logo3.svg";
 import {CiSearch} from "react-icons/ci";
 import {PiShoppingCartThin} from "react-icons/pi";
 import {IoMenuOutline} from "react-icons/io5";
@@ -43,7 +43,7 @@ const HeaderTwo: React.FC<Props> = ({showAuth, setShowAuth}) => {
                     <IoMenuOutline className="w-8 h-8" />
                 </div>
                 <div className="w-max h-full flex items-center">
-                    <img src={logo} alt="" className="w-60 phone:w-36" />
+                    <img src={logos} alt="" className="w-60 phone:w-36" />
                 </div>
                 <div className="w-[24rem] h-full flex items-center justify-between text-[#232323] phone:hidden">
                     <NavLink to={"/"}>

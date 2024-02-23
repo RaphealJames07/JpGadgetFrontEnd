@@ -1,4 +1,4 @@
-import logos from "../assets/Logo3.svg";
+// import logos from "../assets/Logo3.svg";
 import {CiSearch} from "react-icons/ci";
 import {PiShoppingCartThin} from "react-icons/pi";
 import {IoMenuOutline} from "react-icons/io5";
@@ -11,6 +11,7 @@ import Carousel from "./Carousel";
 import SideCart from "./SideCart";
 import {RiLogoutCircleLine} from "react-icons/ri";
 import {NavLink} from "react-router-dom";
+import logo from '../assets/logo3.svg'
 interface Props {
     setShowAuth: React.Dispatch<React.SetStateAction<boolean>>;
     showAuth: boolean;
@@ -43,7 +44,7 @@ const HeaderTwo: React.FC<Props> = ({showAuth, setShowAuth}) => {
                     <IoMenuOutline className="w-8 h-8" />
                 </div>
                 <div className="w-max h-full flex items-center">
-                    <img src={logos} alt="" className="w-60 phone:w-36" />
+                    <img src={logo} alt="" className="w-60 phone:w-36" />
                 </div>
                 <div className="w-[24rem] h-full flex items-center justify-between text-[#232323] phone:hidden">
                     <NavLink to={"/"}>

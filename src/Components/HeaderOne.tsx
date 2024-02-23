@@ -1,5 +1,6 @@
 import {useState} from "react";
 import {FaCaretDown} from "react-icons/fa";
+import {NavLink} from "react-router-dom";
 
 interface Props {
     setShowAuth: React.Dispatch<React.SetStateAction<boolean>>;
@@ -174,9 +175,11 @@ const HeaderOne: React.FC<Props> = ({showAuth, setShowAuth}) => {
                             </div>
                         </div>
                     </div>
-                    <p className="transition-all duration-300 cursor-pointer hover:text-gray-300">
-                        Wishlist
-                    </p>
+                    <NavLink to={"/my-wishlists"}>
+                        <p className="transition-all duration-300 cursor-pointer hover:text-gray-300">
+                            Wishlist
+                        </p>
+                    </NavLink>
                     <p
                         className="transition-all duration-300 phone:hidden cursor-pointer hover:text-gray-300 flex items-center gap-2 relative z-30"
                         onClick={() => setlanguageDropdown(!languageDropdown)}

@@ -1,12 +1,12 @@
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-import cat1 from "../assets/Category-1.png";
-import cat2 from "../assets/Category-2.png";
-import cat3 from "../assets/Category-3.png";
-import cat4 from "../assets/Category-4.avif";
-import cat5 from "../assets/Category-5.png";
-import cat6 from "../assets/Category-6.png";
+import cat1 from "../../../assets/Category-1.png";
+import cat2 from "../../../assets/Category-2.png";
+import cat3 from "../../../assets/Category-3.png";
+import cat4 from "../../../assets/Category-4.avif";
+import cat5 from "../../../assets/Category-5.png";
+import cat6 from "../../../assets/Category-6.png";
 
 const PopularCol = () => {
     const owlOptions = {

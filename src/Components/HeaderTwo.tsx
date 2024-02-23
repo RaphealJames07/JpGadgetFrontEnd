@@ -6,10 +6,11 @@ import {Drawer} from "antd";
 import {useState} from "react";
 import {FaCaretDown, FaCaretUp, FaUserAlt} from "react-icons/fa";
 import {IoMdSearch} from "react-icons/io";
-import "./owl.css";
+// import "./owl.css";
 import Carousel from "./Carousel";
 import SideCart from "./SideCart";
 import {RiLogoutCircleLine} from "react-icons/ri";
+import {NavLink} from "react-router-dom";
 interface Props {
     setShowAuth: React.Dispatch<React.SetStateAction<boolean>>;
     showAuth: boolean;
@@ -45,9 +46,11 @@ const HeaderTwo: React.FC<Props> = ({showAuth, setShowAuth}) => {
                     <img src={logo} alt="" className="w-60 phone:w-36" />
                 </div>
                 <div className="w-[24rem] h-full flex items-center justify-between text-[#232323] phone:hidden">
-                    <div className="w-max h-max cursor-pointer hover:text-[#008081] transition-all duration-400">
-                        Home
-                    </div>
+                    <NavLink to={"/"}>
+                        <div className="w-max h-max cursor-pointer hover:text-[#008081] transition-all duration-400">
+                            Home
+                        </div>
+                    </NavLink>
                     <div
                         className="w-max h-max cursor-pointer hover:text-[#008081] transition-all duration-400 flex items-center gap-2 relative"
                         onMouseEnter={() => setCollectionDrop(!collectionDrop)}
@@ -64,9 +67,11 @@ const HeaderTwo: React.FC<Props> = ({showAuth, setShowAuth}) => {
                                 collectionDrop ? " active" : ""
                             }`}
                         >
-                            <div className="w-full h-8 cursor-pointer text-black hover:text-[#008081] flex items-center">
-                                Phones
-                            </div>
+                            <NavLink to={"/collections"}>
+                                <div className="w-full h-8 cursor-pointer text-black hover:text-[#008081] flex items-center">
+                                    Phones
+                                </div>
+                            </NavLink>
                             <div className="w-full h-8 cursor-pointer text-black hover:text-[#008081] flex items-center">
                                 Tablets
                             </div>
@@ -84,9 +89,11 @@ const HeaderTwo: React.FC<Props> = ({showAuth, setShowAuth}) => {
                             </div>
                         </div>
                     </div>
-                    <div className="w-max h-max cursor-pointer hover:text-[#008081] transition-all duration-400">
-                        Shop
-                    </div>
+                    <NavLink to={"/shop"}>
+                        <div className="w-max h-max cursor-pointer hover:text-[#008081] transition-all duration-400">
+                            Shop
+                        </div>
+                    </NavLink>
                     <div
                         className="w-max h-max cursor-pointer hover:text-[#008081] transition-all duration-400 flex items-center gap-2 relative"
                         onMouseEnter={() => setMoreDrop(!moreDrop)}
@@ -103,21 +110,31 @@ const HeaderTwo: React.FC<Props> = ({showAuth, setShowAuth}) => {
                                 moreDrop ? " active" : ""
                             }`}
                         >
-                            <div className="w-full h-8 cursor-pointer text-black hover:text-[#008081] flex items-center">
-                                About Us
-                            </div>
-                            <div className="w-full h-8 cursor-pointer text-black hover:text-[#008081] flex items-center">
-                                Contact Us
-                            </div>
-                            <div className="w-full h-8 cursor-pointer text-black hover:text-[#008081] flex items-center">
-                                Blog
-                            </div>
-                            <div className="w-full h-8 cursor-pointer text-black hover:text-[#008081] flex items-center">
-                                FAQs
-                            </div>
-                            <div className="w-full h-8 cursor-pointer text-black hover:text-[#008081] flex items-center">
-                                Services
-                            </div>
+                            <NavLink to={"/about-us"}>
+                                <div className="w-full h-8 cursor-pointer text-black hover:text-[#008081] flex items-center">
+                                    About Us
+                                </div>
+                            </NavLink>
+                            <NavLink to={"/contact-us"}>
+                                <div className="w-full h-8 cursor-pointer text-black hover:text-[#008081] flex items-center">
+                                    Contact Us
+                                </div>
+                            </NavLink>
+                            <NavLink to={"/blog"}>
+                                <div className="w-full h-8 cursor-pointer text-black hover:text-[#008081] flex items-center">
+                                    Blog
+                                </div>
+                            </NavLink>
+                            <NavLink to={"/frequently-asked"}>
+                                <div className="w-full h-8 cursor-pointer text-black hover:text-[#008081] flex items-center">
+                                    FAQs
+                                </div>
+                            </NavLink>
+                            <NavLink to={"/services"}>
+                                <div className="w-full h-8 cursor-pointer text-black hover:text-[#008081] flex items-center">
+                                    Services
+                                </div>
+                            </NavLink>
                         </div>
                     </div>
                 </div>

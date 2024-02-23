@@ -1,7 +1,7 @@
 import {useState} from "react";
-import image1 from "../assets/Hero2Bg1.webp";
-import image2 from "../assets/Hero2Bg2.webp";
-import image3 from "../assets/Hero2Bg3.webp";
+import image1 from "../../../assets/Hero2Bg1.webp";
+import image2 from "../../../assets/Hero2Bg2.webp";
+import image3 from "../../../assets/Hero2Bg3.webp";
 
 const SubHero = () => {
     const [hoverA, setHoverA] = useState(false);

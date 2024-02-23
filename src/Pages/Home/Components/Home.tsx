@@ -1,21 +1,21 @@
 //ENTRY FOR HOME PAGE
 
 import {useState} from "react";
-import HeaderOne from "../Components/HeaderOne";
-import HeaderTwo from "../Components/HeaderTwo";
-import Hero from "../Components/Hero";
-import SubHero from "../Components/SubHero";
+import HeaderOne from "../../Components/HeaderOne";
+import HeaderTwo from "../../Components/HeaderTwo";
+import Hero from "../../Components/Hero";
+import SubHero from "../../Components/SubHero";
 // import HomeShop from "../Components/HomeShop";
-import QuickView from "../Components/QuickView";
+import QuickView from "../../Components/QuickView";
 import {Modal} from "antd";
-import PopularCat from "../Components/PopularCol";
-import Latest from "../Components/Latest";
-import DealOfTheDay from "../Components/DealOfTheDay";
-import BigDiscount from "../Components/BigDiscount";
-import ShopSafely from "../Components/ShopSafely";
-import HomeShopTwo from "../Components/HomeShopTwo";
-import LatestNews from "../Components/LatestNews";
-import Footer from "../Components/Footer";
+import PopularCat from "../../Components/PopularCol";
+import Latest from "../../Components/Latest";
+import DealOfTheDay from "../../Components/DealOfTheDay";
+import BigDiscount from "../../Components/BigDiscount";
+import ShopSafely from "../../Components/ShopSafely";
+import HomeShopTwo from "../../Components/HomeShopTwo";
+import LatestNews from "../../Components/LatestNews";
+import Footer from "../../Components/Footer";
 
 const Home = () => {
     const [showAuth, setShowAuth] = useState<boolean>(false);

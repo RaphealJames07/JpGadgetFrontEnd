@@ -1,6 +1,6 @@
 import {FaComment, FaRegCalendarAlt} from "react-icons/fa";
 import OwlCarousel from "react-owl-carousel";
-import "./LatestNews.css";
+// import "./LatestNews.css";
 
 const LatestNews = () => {
     const owlOptions = {

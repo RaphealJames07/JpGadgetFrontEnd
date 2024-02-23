@@ -1,6 +1,6 @@
-import img1 from '../assets/shopsafe1.webp'
-import img2 from '../assets/shopsafe2.webp'
-import img3 from '../assets/shopsafe3.webp'
+import img1 from '../../../assets/shopsafe1.webp'
+import img2 from '../../../assets/shopsafe2.webp'
+import img3 from '../../../assets/shopsafe3.webp'
 
 const ShopSafely = () => {
     return (

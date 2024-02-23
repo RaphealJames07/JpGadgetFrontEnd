@@ -1,7 +1,7 @@
 import {HiOutlineHeart} from "react-icons/hi";
 import {ImEye} from "react-icons/im";
 import {TbStar, TbStarFilled} from "react-icons/tb";
-import shopImg1 from "../assets/shopimg3.webp";
+import shopImg1 from "../../../assets/shopimg3.webp";
 import {useState} from "react";
 
 interface Props {

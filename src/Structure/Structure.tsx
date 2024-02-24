@@ -8,21 +8,36 @@ import Footer from "../Components/Footer";
 import {Outlet} from "react-router";
 
 interface StructureProps {
-  // Define props interface
-  showAuth: boolean;
-  showInfo: boolean;
-  setShowAuth: React.Dispatch<React.SetStateAction<boolean>>;
-  setShowInfo: React.Dispatch<React.SetStateAction<boolean>>;
+    // Define props interface
+    showAuth: boolean;
+    showInfo: boolean;
+    setShowAuth: React.Dispatch<React.SetStateAction<boolean>>;
+    setShowInfo: React.Dispatch<React.SetStateAction<boolean>>;
 }
-const Structure: React.FC<StructureProps> = ({ showInfo,setShowInfo, setShowAuth,showAuth }) => {
-
+const Structure: React.FC<StructureProps> = ({
+    showInfo,
+    setShowInfo,
+    setShowAuth,
+    showAuth,
+}) => {
     return (
         <>
             <div className="w-full h-max relative ">
                 <div className="w-full h-max">
-                    <HeaderOne  showAuth={showAuth} setShowAuth={setShowAuth}/>
-                    <HeaderTwo  showAuth={showAuth} setShowAuth={setShowAuth}/>
+                    <div className="w-full h-max fixed top-0 left-0 z-50">
+                        <HeaderOne
+                            showAuth={showAuth}
+                            setShowAuth={setShowAuth}
+                        />
+                        <HeaderTwo
+                            showAuth={showAuth}
+                            setShowAuth={setShowAuth}
+                        />
+                    </div>
+                    <div className="w-full h-max mt-[7.5rem]">
+
                     <Outlet />
+                    </div>
                     <Footer />
                 </div>
             </div>

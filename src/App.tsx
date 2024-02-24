@@ -21,6 +21,12 @@ import Verify from "./Pages/Account/Auth/Verify";
 import ResetPassword from "./Pages/Account/Auth/ResetPassword";
 import ForgetPassword from "./Pages/Account/Auth/ForgetPassword";
 import {useState} from "react";
+import TabletsC from "./Pages/Collection/TabletsC";
+import LaptopsC from "./Pages/Collection/LaptopsC";
+import AirpodsC from "./Pages/Collection/AirpodsC";
+import SpeakersC from "./Pages/Collection/SpeakersC";
+import SmartWatches from "./Pages/Collection/SmartWatches";
+import ConsolesC from "./Pages/Collection/ConsolesC";
 
 const App = () => {
     const [showAuth, setShowAuth] = useState<boolean>(false);
@@ -40,10 +46,7 @@ const App = () => {
                 {
                     path: "",
                     element: (
-                        <Home
-                            setShowInfo={setShowInfo}
-                            showInfo={showInfo}
-                        />
+                        <Home setShowInfo={setShowInfo} showInfo={showInfo} />
                     ),
                 },
                 {
@@ -53,6 +56,34 @@ const App = () => {
                 {
                     path: "collections",
                     element: <Collection />,
+                },
+                {
+                    path: "collections/phones",
+                    element: <Collection />,
+                },
+                {
+                    path: "collections/tablets",
+                    element: <TabletsC />,
+                },
+                {
+                    path: "collections/laptops",
+                    element: <LaptopsC />,
+                },
+                {
+                    path: "collections/airpods",
+                    element: <AirpodsC />,
+                },
+                {
+                    path: "collections/speakers",
+                    element: <SpeakersC />,
+                },
+                {
+                    path: "collections/smartwatches",
+                    element: <SmartWatches />,
+                },
+                {
+                    path: "collections/consoles",
+                    element: <ConsolesC />,
                 },
                 {
                     path: "about-us",

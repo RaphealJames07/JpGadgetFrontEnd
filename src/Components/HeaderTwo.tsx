@@ -11,7 +11,7 @@ import Carousel from "./Carousel";
 import SideCart from "./SideCart";
 import {RiLogoutCircleLine} from "react-icons/ri";
 import {NavLink} from "react-router-dom";
-import logo from '../assets/logo3.svg'
+import logo from "../assets/logo3.svg";
 interface Props {
     setShowAuth: React.Dispatch<React.SetStateAction<boolean>>;
     showAuth: boolean;
@@ -194,9 +194,11 @@ const HeaderTwo: React.FC<Props> = ({showAuth, setShowAuth}) => {
                 <div className="w-full h-full p-4 flex flex-col justify-between">
                     <div className="w-full h-max flex flex-col gap-2">
                         <div className="w-full h-max flex justify-between items-center cursor-pointer">
-                            <div className="w-full h-10 flex items-center">
-                                Home
-                            </div>
+                            <NavLink to={"/"}>
+                                <div className="w-full h-10 flex items-center">
+                                    Home
+                                </div>
+                            </NavLink>
                         </div>
                         <div className="w-full h-max flex flex-col justify-between items-center cursor-pointer">
                             <div
@@ -217,7 +219,7 @@ const HeaderTwo: React.FC<Props> = ({showAuth, setShowAuth}) => {
                             <div
                                 className={`w-full ${
                                     sideCollectionDrop
-                                        ? "max-h-72 overflow-hidden transition-max-h duration-700 ease-in-out"
+                                        ? "max-h-80 overflow-hidden transition-max-h duration-700 ease-in-out"
                                         : "max-h-0 overflow-hidden transition-max-h duration-700 ease-in-out "
                                 } flex flex-col gap-2 text-sm`}
                             >
@@ -226,6 +228,9 @@ const HeaderTwo: React.FC<Props> = ({showAuth, setShowAuth}) => {
                                 </div>
                                 <div className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded">
                                     Tablets
+                                </div>
+                                <div className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded">
+                                    Laptops
                                 </div>
                                 <div className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded">
                                     Airpods
@@ -242,9 +247,11 @@ const HeaderTwo: React.FC<Props> = ({showAuth, setShowAuth}) => {
                             </div>
                         </div>
                         <div className="w-full h-max flex justify-between items-center cursor-pointer">
-                            <div className="w-full h-10 flex items-center">
-                                Shop
-                            </div>
+                            <NavLink to={"/shop"}>
+                                <div className="w-full h-10 flex items-center">
+                                    Shop
+                                </div>
+                            </NavLink>
                         </div>
                         <div className="w-full h-max flex flex-col justify-between items-center cursor-pointer">
                             <div
@@ -267,21 +274,31 @@ const HeaderTwo: React.FC<Props> = ({showAuth, setShowAuth}) => {
                                         : "max-h-0 overflow-hidden transition-max-h duration-700 ease-in-out "
                                 } flex flex-col gap-2 text-sm`}
                             >
-                                <div className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded">
-                                    About Us
-                                </div>
-                                <div className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded">
-                                    Contact Us
-                                </div>
-                                <div className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded">
-                                    Blogs
-                                </div>
-                                <div className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded">
-                                    FAQs
-                                </div>
-                                <div className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded">
-                                    Services
-                                </div>
+                                <NavLink to={"/about-us"}>
+                                    <div className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded">
+                                        About Us
+                                    </div>
+                                </NavLink>
+                                <NavLink to={"/contact-us"}>
+                                    <div className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded">
+                                        Contact Us
+                                    </div>
+                                </NavLink>
+                                <NavLink to={"/blog"}>
+                                    <div className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded">
+                                        Blogs
+                                    </div>
+                                </NavLink>
+                                <NavLink to={"/frequently-asked"}>
+                                    <div className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded">
+                                        FAQs
+                                    </div>
+                                </NavLink>
+                                <NavLink to={"/services"}>
+                                    <div className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded">
+                                        Services
+                                    </div>
+                                </NavLink>
                             </div>
                         </div>
                     </div>

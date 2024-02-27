@@ -516,3 +516,29 @@
     transform: scale(1.05);
     transition: all 1.8s ease-in-out;
 }
+
+.phoneColBg1 {
+    background-image: url(./assets/collectionPhone1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: all 1.8s ease-in-out;
+}
+.phoneColBg2 {
+    background-image: url(./assets/collectionPhone2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: all 1.8s ease-in-out;
+}
+
+.phoneColBg1:hover, .collBg2:hover, .collBg3:hover, .collBg4:hover, .collBg5:hover, .collBg6:hover {
+    transform: scale(1.05);
+    transition: all 1.8s ease-in-out;
+}

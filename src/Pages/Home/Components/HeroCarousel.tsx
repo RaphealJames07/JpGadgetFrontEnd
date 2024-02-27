@@ -10,7 +10,7 @@ const Test = () => {
         loop: true,
         autoWidth: false,
         items: 1,
-        autoplay: false,
+        autoplay: true,
         autoplayTimeout: 5000,
         mergeFit: true,
         stagePadding: 0,

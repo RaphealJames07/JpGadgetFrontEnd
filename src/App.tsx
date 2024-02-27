@@ -27,6 +27,9 @@ import AirpodsC from "./Pages/Collection/AirpodsC";
 import SpeakersC from "./Pages/Collection/SpeakersC";
 import SmartWatches from "./Pages/Collection/SmartWatches";
 import ConsolesC from "./Pages/Collection/ConsolesC";
+import Test from "./Components/Test";
+import PhonesC from "./Pages/Collection/PhonesC";
+// import 'swiper/css/swiper.css'
 
 const App = () => {
     const [showAuth, setShowAuth] = useState<boolean>(false);
@@ -59,7 +62,7 @@ const App = () => {
                 },
                 {
                     path: "collections/phones",
-                    element: <Collection />,
+                    element: <PhonesC />,
                 },
                 {
                     path: "collections/tablets",
@@ -144,6 +147,10 @@ const App = () => {
                 {
                     path: "forget-password",
                     element: <ForgetPassword />,
+                },
+                {
+                    path: "test",
+                    element: <Test />,
                 },
             ],
         },

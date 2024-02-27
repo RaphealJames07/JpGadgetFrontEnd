@@ -6,6 +6,7 @@ import QuickView from "../Components/QuickView";
 import {Modal} from "antd";
 import Footer from "../Components/Footer";
 import {Outlet} from "react-router";
+import ToTop from "../Components/ToTop";
 
 interface StructureProps {
     // Define props interface
@@ -22,6 +23,7 @@ const Structure: React.FC<StructureProps> = ({
 }) => {
     return (
         <>
+            <ToTop />
             <div className="w-full h-max relative ">
                 <div className="w-full h-max">
                     <div className="w-full h-max fixed top-0 left-0 z-50">
@@ -35,8 +37,7 @@ const Structure: React.FC<StructureProps> = ({
                         />
                     </div>
                     <div className="w-full h-max mt-[7.5rem]">
-
-                    <Outlet />
+                        <Outlet />
                     </div>
                     <Footer />
                 </div>

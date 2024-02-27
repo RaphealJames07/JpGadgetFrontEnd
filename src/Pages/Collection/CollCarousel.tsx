@@ -2,7 +2,7 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
-const Test = () => {
+const CollCarousel = () => {
     const owlOptions = {
         loop: true,
         autoWidth: false,
@@ -40,7 +40,7 @@ const Test = () => {
                         <div className="collBg1">
                             <div className="w-full h-full bg-[#00000089] flex items-center justify-center flex-col gap-5 text-white">
                                 <p className="text-5xl ">Phones</p>
-                                <p>
+                                <p className="w-[90%] text-center items-center justify-center">
                                     Explore our wide range of smartphones and
                                     find the perfect match for your needs. Enjoy
                                     top-notch performance, stunning displays,
@@ -58,7 +58,7 @@ const Test = () => {
                         <div className="collBg2">
                             <div className="w-full h-full bg-[#00000089] flex items-center justify-center flex-col gap-5 text-white">
                                 <p className="text-5xl">Tablets</p>
-                                <p>
+                                <p className="w-[90%] text-center items-center justify-center">
                                     Discover our collection of tablets, designed
                                     to enhance your productivity and
                                     entertainment experience. Immerse yourself
@@ -77,7 +77,7 @@ const Test = () => {
                         <div className="collBg3">
                             <div className="w-full h-full bg-[#00000089] flex items-center justify-center flex-col gap-5 text-white">
                                 <p className="text-5xl">Airpods</p>
-                                <p>
+                                <p className="w-[90%] text-center items-center justify-center">
                                     Elevate your audio experience with our range
                                     of Airpods. Enjoy crystal-clear sound and
                                     seamless connectivity for an immersive
@@ -95,7 +95,7 @@ const Test = () => {
                         <div className="collBg4">
                             <div className="w-full h-full bg-[#00000089] flex items-center justify-center flex-col gap-5 text-white">
                                 <p className="text-5xl">Speakers</p>
-                                <p>
+                                <p className="w-[90%] text-center items-center justify-center">
                                     Immerse yourself in premium sound quality
                                     with our range of speakers. Experience rich,
                                     lifelike audio in any environment.
@@ -112,7 +112,7 @@ const Test = () => {
                         <div className="collBg5">
                             <div className="w-full h-full bg-[#00000089] flex items-center justify-center flex-col gap-5 text-white">
                                 <p className="text-5xl">Consoles</p>
-                                <p>
+                                <p className="w-[90%] text-center items-center justify-center">
                                     Dive into the world of gaming with our
                                     cutting-edge consoles. Experience
                                     unparalleled performance and immersive
@@ -130,7 +130,7 @@ const Test = () => {
                         <div className="collBg6">
                             <div className="w-full h-full bg-[#00000089] flex items-center justify-center flex-col gap-5 text-white">
                                 <p className="text-5xl">Smartwatches</p>
-                                <p>
+                                <p className="w-[90%] text-center items-center justify-center">
                                     Stay connected and stay active with our
                                     range of smartwatches. Track your fitness
                                     goals, receive notifications, and access
@@ -148,4 +148,4 @@ const Test = () => {
     );
 };
 
-export default Test;
+export default CollCarousel;

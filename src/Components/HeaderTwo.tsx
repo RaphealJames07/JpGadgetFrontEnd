@@ -12,6 +12,7 @@ import SideCart from "./SideCart";
 import {RiLogoutCircleLine} from "react-icons/ri";
 import {NavLink} from "react-router-dom";
 import logo from "../assets/logo3.svg";
+import { useNavigate } from "react-router-dom";
 interface Props {
     setShowAuth: React.Dispatch<React.SetStateAction<boolean>>;
     showAuth: boolean;
@@ -34,6 +35,14 @@ const HeaderTwo: React.FC<Props> = ({showAuth, setShowAuth}) => {
         setOpenSideBar(false);
     };
 
+    const handleCloseSidebar = () => {
+        setOpenSideBar(!openSideBar);
+    };
+    const nav = useNavigate()
+    const navToHome = () =>{
+        nav("/")
+    }
+
     return (
         <>
             <div className="w-full h-20 bg-white shadow px-44 phone:px-5 flex justify-between z-50">
@@ -43,7 +52,7 @@ const HeaderTwo: React.FC<Props> = ({showAuth, setShowAuth}) => {
                 >
                     <IoMenuOutline className="w-8 h-8" />
                 </div>
-                <div className="w-max h-full flex items-center">
+                <div className="w-max h-full flex items-center" onClick={navToHome}>
                     <img src={logo} alt="" className="w-60 phone:w-36" />
                 </div>
                 <div className="w-[24rem] h-full flex items-center justify-between text-[#232323] phone:hidden">
@@ -68,26 +77,36 @@ const HeaderTwo: React.FC<Props> = ({showAuth, setShowAuth}) => {
                                 collectionDrop ? " active" : ""
                             }`}
                         >
-                            <NavLink to={"/collections"}>
+                            <NavLink to={"/collections/phones"}>
                                 <div className="w-full h-8 cursor-pointer text-black hover:text-[#008081] flex items-center">
                                     Phones
                                 </div>
                             </NavLink>
-                            <div className="w-full h-8 cursor-pointer text-black hover:text-[#008081] flex items-center">
-                                Tablets
-                            </div>
-                            <div className="w-full h-8 cursor-pointer text-black hover:text-[#008081] flex items-center">
-                                Airpods
-                            </div>
-                            <div className="w-full h-8 cursor-pointer text-black hover:text-[#008081] flex items-center">
-                                Speakers
-                            </div>
-                            <div className="w-full h-8 cursor-pointer text-black hover:text-[#008081] flex items-center">
-                                Consoles
-                            </div>
-                            <div className="w-full h-8 cursor-pointer text-black hover:text-[#008081] flex items-center">
-                                Smart Watch
-                            </div>
+                            <NavLink to={"/collections/tablets"}>
+                                <div className="w-full h-8 cursor-pointer text-black hover:text-[#008081] flex items-center">
+                                    Tablets
+                                </div>
+                            </NavLink>
+                            <NavLink to={"/collections/airpods"}>
+                                <div className="w-full h-8 cursor-pointer text-black hover:text-[#008081] flex items-center">
+                                    Airpods
+                                </div>
+                            </NavLink>
+                            <NavLink to={"/collections/speakers"}>
+                                <div className="w-full h-8 cursor-pointer text-black hover:text-[#008081] flex items-center">
+                                    Speakers
+                                </div>
+                            </NavLink>
+                            <NavLink to={"/collections/consoles"}>
+                                <div className="w-full h-8 cursor-pointer text-black hover:text-[#008081] flex items-center">
+                                    Consoles
+                                </div>
+                            </NavLink>
+                            <NavLink to={"/collections/smartwatches"}>
+                                <div className="w-full h-8 cursor-pointer text-black hover:text-[#008081] flex items-center">
+                                    Smart Watch
+                                </div>
+                            </NavLink>
                         </div>
                     </div>
                     <NavLink to={"/shop"}>
@@ -194,8 +213,11 @@ const HeaderTwo: React.FC<Props> = ({showAuth, setShowAuth}) => {
                 <div className="w-full h-full p-4 flex flex-col justify-between">
                     <div className="w-full h-max flex flex-col gap-2">
                         <div className="w-full h-max flex justify-between items-center cursor-pointer">
-                            <NavLink to={"/"}>
-                                <div className="w-full h-10 flex items-center">
+                            <NavLink to={"/"} className="w-full">
+                                <div
+                                    className="w-full h-10 flex items-center"
+                                    onClick={handleCloseSidebar}
+                                >
                                     Home
                                 </div>
                             </NavLink>
@@ -223,32 +245,70 @@ const HeaderTwo: React.FC<Props> = ({showAuth, setShowAuth}) => {
                                         : "max-h-0 overflow-hidden transition-max-h duration-700 ease-in-out "
                                 } flex flex-col gap-2 text-sm`}
                             >
-                                <div className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded">
-                                    Phones
-                                </div>
-                                <div className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded">
-                                    Tablets
-                                </div>
-                                <div className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded">
-                                    Laptops
-                                </div>
-                                <div className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded">
-                                    Airpods
-                                </div>
-                                <div className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded">
-                                    Speakers
-                                </div>
-                                <div className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded">
-                                    Consoles
-                                </div>
-                                <div className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded">
-                                    Smart Watches
-                                </div>
+                                <NavLink to={"/collections/phones"}>
+                                    <div
+                                        className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded"
+                                        onClick={handleCloseSidebar}
+                                    >
+                                        Phones
+                                    </div>
+                                </NavLink>
+                                <NavLink to={"/collections/tablets"}>
+                                    <div
+                                        className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded"
+                                        onClick={handleCloseSidebar}
+                                    >
+                                        Tablets
+                                    </div>
+                                </NavLink>
+                                <NavLink to={"/collections/laptops"}>
+                                    <div
+                                        className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded"
+                                        onClick={handleCloseSidebar}
+                                    >
+                                        Laptops
+                                    </div>
+                                </NavLink>
+                                <NavLink to={"/collections/airpods"}>
+                                    <div
+                                        className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded"
+                                        onClick={handleCloseSidebar}
+                                    >
+                                        Airpods
+                                    </div>
+                                </NavLink>
+                                <NavLink to={"/collections/speakers"}>
+                                    <div
+                                        className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded"
+                                        onClick={handleCloseSidebar}
+                                    >
+                                        Speakers
+                                    </div>
+                                </NavLink>
+                                <NavLink to={"/collections/consoles"}>
+                                    <div
+                                        className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded"
+                                        onClick={handleCloseSidebar}
+                                    >
+                                        Consoles
+                                    </div>
+                                </NavLink>
+                                <NavLink to={"/collections/smartwatches"}>
+                                    <div
+                                        className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded"
+                                        onClick={handleCloseSidebar}
+                                    >
+                                        Smart Watches
+                                    </div>
+                                </NavLink>
                             </div>
                         </div>
                         <div className="w-full h-max flex justify-between items-center cursor-pointer">
-                            <NavLink to={"/shop"}>
-                                <div className="w-full h-10 flex items-center">
+                            <NavLink to={"/shop"} className="w-full">
+                                <div
+                                    className="w-full h-10 flex items-center"
+                                    onClick={handleCloseSidebar}
+                                >
                                     Shop
                                 </div>
                             </NavLink>
@@ -274,28 +334,46 @@ const HeaderTwo: React.FC<Props> = ({showAuth, setShowAuth}) => {
                                         : "max-h-0 overflow-hidden transition-max-h duration-700 ease-in-out "
                                 } flex flex-col gap-2 text-sm`}
                             >
-                                <NavLink to={"/about-us"}>
-                                    <div className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded">
+                                <NavLink className="w-full" to={"/about-us"}>
+                                    <div
+                                        className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded "
+                                        onClick={handleCloseSidebar}
+                                    >
                                         About Us
                                     </div>
                                 </NavLink>
-                                <NavLink to={"/contact-us"}>
-                                    <div className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded">
+                                <NavLink className="w-full" to={"/contact-us"}>
+                                    <div
+                                        className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded "
+                                        onClick={handleCloseSidebar}
+                                    >
                                         Contact Us
                                     </div>
                                 </NavLink>
-                                <NavLink to={"/blog"}>
-                                    <div className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded">
+                                <NavLink className="w-full" to={"/blog"}>
+                                    <div
+                                        className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded "
+                                        onClick={handleCloseSidebar}
+                                    >
                                         Blogs
                                     </div>
                                 </NavLink>
-                                <NavLink to={"/frequently-asked"}>
-                                    <div className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded">
+                                <NavLink
+                                    className="w-full"
+                                    to={"/frequently-asked"}
+                                >
+                                    <div
+                                        className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded "
+                                        onClick={handleCloseSidebar}
+                                    >
                                         FAQs
                                     </div>
                                 </NavLink>
-                                <NavLink to={"/services"}>
-                                    <div className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded">
+                                <NavLink className="w-full" to={"/services"}>
+                                    <div
+                                        className="w-full h-10 cursor-pointer hover:bg-slate-100 transition-all duration-500 flex items-center px-2 rounded "
+                                        onClick={handleCloseSidebar}
+                                    >
                                         Services
                                     </div>
                                 </NavLink>

@@ -21,14 +21,15 @@ import Verify from "./Pages/Account/Auth/Verify";
 import ResetPassword from "./Pages/Account/Auth/ResetPassword";
 import ForgetPassword from "./Pages/Account/Auth/ForgetPassword";
 import {useState} from "react";
-import TabletsC from "./Pages/Collection/TabletsC";
-import LaptopsC from "./Pages/Collection/LaptopsC";
-import AirpodsC from "./Pages/Collection/AirpodsC";
-import SpeakersC from "./Pages/Collection/SpeakersC";
-import SmartWatches from "./Pages/Collection/SmartWatches";
-import ConsolesC from "./Pages/Collection/ConsolesC";
+
 import Test from "./Components/Test";
-import PhonesC from "./Pages/Collection/PhonesC";
+import PhonesCollection from "./Pages/Collection/Phones/PhonesCollection";
+import TabletCollection from "./Pages/Collection/Tablet/TabletCollection";
+import LaptopCollection from "./Pages/Collection/Laptop/LaptopCollection";
+import AirpodsCollection from "./Pages/Collection/Airpods/AirpodsCollection";
+import SpeakerCollection from "./Pages/Collection/Speaker/SpeakerCollection";
+import SmartWatchCollection from "./Pages/Collection/SmartWatch/SmartWatchCollection";
+import ConsolesCollection from "./Pages/Collection/Consoles/ConsolesCollection";
 // import 'swiper/css/swiper.css'
 
 const App = () => {
@@ -62,31 +63,31 @@ const App = () => {
                 },
                 {
                     path: "collections/phones",
-                    element: <PhonesC />,
+                    element: <PhonesCollection />,
                 },
                 {
                     path: "collections/tablets",
-                    element: <TabletsC />,
+                    element: <TabletCollection />,
                 },
                 {
                     path: "collections/laptops",
-                    element: <LaptopsC />,
+                    element: <LaptopCollection />,
                 },
                 {
                     path: "collections/airpods",
-                    element: <AirpodsC />,
+                    element: <AirpodsCollection />,
                 },
                 {
                     path: "collections/speakers",
-                    element: <SpeakersC />,
+                    element: <SpeakerCollection />,
                 },
                 {
                     path: "collections/smartwatches",
-                    element: <SmartWatches />,
+                    element: <SmartWatchCollection />,
                 },
                 {
                     path: "collections/consoles",
-                    element: <ConsolesC />,
+                    element: <ConsolesCollection />,
                 },
                 {
                     path: "about-us",

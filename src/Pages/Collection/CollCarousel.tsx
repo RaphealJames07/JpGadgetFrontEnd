@@ -143,6 +143,24 @@ const CollCarousel = () => {
                         </div>
                     </div>
                 </div>
+                <div className="item w-full h-[70vh]  ">
+                    <div className="w-full h-full flex items-center justify-center ">
+                        <div className="collBg7">
+                            <div className="w-full h-full bg-[#00000089] flex items-center justify-center flex-col gap-5 text-white">
+                                <p className="text-5xl">Laptops</p>
+                                <p className="w-[90%] text-center items-center justify-center">
+                                    Stay connected and stay active with our
+                                    range of Laptops. Track your fitness
+                                    goals, receive notifications, and access
+                                    essential apps right from your wrist.
+                                </p>
+                                <button className="w-max h-max px-6 py-2 rounded bg-[#0f807f] text-white">
+                                    View Laptops
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </OwlCarousel>
         </div>
     );

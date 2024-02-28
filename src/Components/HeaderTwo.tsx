@@ -92,6 +92,11 @@ const HeaderTwo: React.FC<Props> = ({showAuth, setShowAuth}) => {
                                     Airpods
                                 </div>
                             </NavLink>
+                            <NavLink to={"/collections/laptops"}>
+                                <div className="w-full h-8 cursor-pointer text-black hover:text-[#008081] flex items-center">
+                                    Laptops
+                                </div>
+                            </NavLink>
                             <NavLink to={"/collections/speakers"}>
                                 <div className="w-full h-8 cursor-pointer text-black hover:text-[#008081] flex items-center">
                                     Speakers

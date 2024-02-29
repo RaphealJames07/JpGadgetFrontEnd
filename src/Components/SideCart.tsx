@@ -1,6 +1,7 @@
 import {CiCircleInfo} from "react-icons/ci";
 import iphone from "../assets/iphone.png";
 import {RiDeleteBinLine} from "react-icons/ri";
+// import {NavLink} from "react-router-dom";
 
 const SideCart = () => {
     return (
@@ -137,9 +138,11 @@ const SideCart = () => {
                         <p className="w-full flex justify-between text-lg font-semibold">
                             Total <span className="">$64.00</span>
                         </p>
-                        <p className="text-xs">taxes and shipping fees calculated at checkout!</p>
+                        <p className="text-xs">
+                            taxes and shipping fees calculated at checkout!
+                        </p>
                         <div className="w-full h-10 flex items-center justify-between ">
-                            <button className="w-[48%] h-full py-2 bg-black rounded font-medium text-white">
+                            <button className="w-[48%] h-full py-2 bg-black rounded font-medium text-white" >
                                 YOUR CART
                             </button>
                             <button className="w-[48%] h-full py-2 bg-[#ffec00] font-medium">

@@ -16,19 +16,23 @@ const Test = () => {
         stagePadding: 0,
         autoplaySpeed: 1000,
         navSpeed: 1000,
-        dots: true,
+        dots: false,
         margin: 0,
         nav: true,
         responsive: {
             0: {
                 items: 1,
-                nav: false,
+                nav: true,
+                dots: false,
             },
             600: {
                 items: 1,
+                dots: true,
             },
             1000: {
                 items: 1,
+                dots: true,
+                nav: false,
             },
         },
     };

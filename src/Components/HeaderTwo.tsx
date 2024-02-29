@@ -12,13 +12,14 @@ import SideCart from "./SideCart";
 import {RiLogoutCircleLine} from "react-icons/ri";
 import {NavLink} from "react-router-dom";
 import logo from "../assets/logo3.svg";
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 interface Props {
     setShowAuth: React.Dispatch<React.SetStateAction<boolean>>;
     showAuth: boolean;
+    isUser: boolean;
 }
 
-const HeaderTwo: React.FC<Props> = ({showAuth, setShowAuth}) => {
+const HeaderTwo: React.FC<Props> = ({showAuth, setShowAuth, isUser}) => {
     const [openSideBar, setOpenSideBar] = useState<boolean>(false);
     const [collectionDrop, setCollectionDrop] = useState<boolean>(false);
     const [moreDrop, setMoreDrop] = useState<boolean>(false);
@@ -28,7 +29,6 @@ const HeaderTwo: React.FC<Props> = ({showAuth, setShowAuth}) => {
         useState<boolean>(false);
     const [sideMoreDrop, setSideMoreDrop] = useState<boolean>(false);
     const [sidePfp, setSidepfp] = useState<boolean>(false);
-    const user = false;
 
     const handleOpenLogin = () => {
         setShowAuth(!showAuth);
@@ -38,10 +38,10 @@ const HeaderTwo: React.FC<Props> = ({showAuth, setShowAuth}) => {
     const handleCloseSidebar = () => {
         setOpenSideBar(!openSideBar);
     };
-    const nav = useNavigate()
-    const navToHome = () =>{
-        nav("/")
-    }
+    const nav = useNavigate();
+    const navToHome = () => {
+        nav("/");
+    };
 
     return (
         <>
@@ -52,7 +52,10 @@ const HeaderTwo: React.FC<Props> = ({showAuth, setShowAuth}) => {
                 >
                     <IoMenuOutline className="w-8 h-8" />
                 </div>
-                <div className="w-max h-full flex items-center" onClick={navToHome}>
+                <div
+                    className="w-max h-full flex items-center"
+                    onClick={navToHome}
+                >
                     <img src={logo} alt="" className="w-60 phone:w-36" />
                 </div>
                 <div className="w-[24rem] h-full flex items-center justify-between text-[#232323] phone:hidden">
@@ -386,7 +389,7 @@ const HeaderTwo: React.FC<Props> = ({showAuth, setShowAuth}) => {
                         </div>
                     </div>
                     <div className="w-full h-10 flex items-center justify-between ">
-                        {user ? (
+                        {isUser ? (
                             <>
                                 <div className="w-max h-max relative">
                                     <div
@@ -398,7 +401,13 @@ const HeaderTwo: React.FC<Props> = ({showAuth, setShowAuth}) => {
                                         </span>
                                         <p>John</p>
                                         <span>
-                                            <FaCaretUp className="w-5 h-5" />
+                                            <FaCaretUp
+                                                className={`w-5 h-5 transition-all duration-700 ${
+                                                    sidePfp
+                                                        ? "transform -rotate-180"
+                                                        : ""
+                                                }`}
+                                            />
                                         </span>
                                     </div>
                                     <div
@@ -406,21 +415,24 @@ const HeaderTwo: React.FC<Props> = ({showAuth, setShowAuth}) => {
                                             sidePfp ? " active" : ""
                                         }`}
                                     >
-                                        <div className="w-full h-10 flex items-center pl-2 cursor-pointer border-b">
-                                            Profile
-                                        </div>
-                                        <div className="w-full h-10 flex items-center pl-2 cursor-pointer border-b">
-                                            My Orders
-                                        </div>
-                                        <div className="w-full h-10 flex items-center pl-2 cursor-pointer border-b">
-                                            Payment Methods
-                                        </div>
-                                        <div className="w-full h-10 flex items-center pl-2 cursor-pointer">
-                                            WishList
-                                        </div>
+                                        <NavLink to={"/profile"}>
+                                            <div className="w-full h-10 flex items-center pl-2 cursor-pointer border-b">
+                                                Profile
+                                            </div>
+                                        </NavLink>
+                                        <NavLink to={"/my-orders"}>
+                                            <div className="w-full h-10 flex items-center pl-2 cursor-pointer border-b">
+                                                My Orders
+                                            </div>
+                                        </NavLink>
+                                        <NavLink to={"/my-wishlists"}>
+                                            <div className="w-full h-10 flex items-center pl-2 cursor-pointer">
+                                                WishList
+                                            </div>
+                                        </NavLink>
                                     </div>
                                 </div>
-                                <div className="flex items-center gap-2 cursor-pointer">
+                                <div className="flex items-center gap-2 cursor-pointer bg-red-500 w-max h-max p-1 rounded text-white">
                                     <RiLogoutCircleLine className="w-5 h-5" />
                                     Logout
                                 </div>

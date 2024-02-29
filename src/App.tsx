@@ -35,6 +35,7 @@ import ConsolesCollection from "./Pages/Collection/Consoles/ConsolesCollection";
 const App = () => {
     const [showAuth, setShowAuth] = useState<boolean>(false);
     const [showInfo, setShowInfo] = useState<boolean>(false);
+    const isUser = true
     const router = createBrowserRouter([
         {
             path: "",
@@ -44,6 +45,7 @@ const App = () => {
                     showAuth={showAuth}
                     setShowInfo={setShowInfo}
                     showInfo={showInfo}
+                    isUser={isUser}
                 />
             ),
             children: [

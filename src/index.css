@@ -384,7 +384,7 @@
     width: 40px;
     height: 40px;
     z-index: -1;
-    background: #2f904f;
+    background: #108383;
     border-radius: 80% 30% 40% 80%/65% 50% 35% 60%;
 }
 
@@ -732,6 +732,86 @@
     display: flex;
     transition: all 1.8s ease-in-out;
 }
+.servicesDelBg {
+    background-image: url(./assets/servDel.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: all 1.8s ease-in-out;
+}
+.servicesChatBg {
+    background-image: url(./assets/servCustomer.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: all 1.8s ease-in-out;
+}
+.servicesPayBg {
+    background-image: url(./assets/servPay.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: all 1.8s ease-in-out;
+}
+.servicesOfferBg {
+    background-image: url(./assets/servOffer.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: all 1.8s ease-in-out;
+}
+.servicesReturnBg {
+    background-image: url(./assets/servReturn.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: all 1.8s ease-in-out;
+}
+.servicesHybBg {
+    background-image: url(./assets/servShop.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: all 1.8s ease-in-out;
+}
+.servicesTrackBg {
+    background-image: url(./assets/servTrack.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: all 1.8s ease-in-out;
+}
+.servicesPromoBg {
+    background-image: url(./assets/servPromo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: all 1.8s ease-in-out;
+}
 
 .phoneColBg1:hover,
 .tabColBg3:hover,
@@ -751,7 +831,23 @@
 .smartWatchColBg3:hover,
 .airpodColBg1:hover,
 .airpodColBg2:hover,
-.airpodColBg3:hover {
+.airpodColBg3:hover,
+.servicesChatBg:hover,
+.servicesPayBg:hover,
+.servicesOfferBg:hover,
+.servicesReturnBg:hover,
+.servicesHybBg:hover,
+.servicesTrackBg:hover,
+.servicesPromoBg:hover,
+.servicesDelBg:hover {
     transform: scale(1.05);
     transition: all 1.8s ease-in-out;
+}
+.divIncrease:hover {
+    transform: scale(1.05);
+    transition: all 0.8s ease-in-out;
+}
+
+.divIncrease {
+    transition: all 0.8s ease-in-out;
 }

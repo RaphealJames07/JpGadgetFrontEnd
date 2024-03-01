@@ -30,6 +30,7 @@ import AirpodsCollection from "./Pages/Collection/Airpods/AirpodsCollection";
 import SpeakerCollection from "./Pages/Collection/Speaker/SpeakerCollection";
 import SmartWatchCollection from "./Pages/Collection/SmartWatch/SmartWatchCollection";
 import ConsolesCollection from "./Pages/Collection/Consoles/ConsolesCollection";
+import OrderHistoryInfo from "./Pages/Account/MyOrders/OrderHistoryInfo";
 // import 'swiper/css/swiper.css'
 
 const App = () => {
@@ -130,6 +131,10 @@ const App = () => {
                 {
                     path: "my-orders",
                     element: <MyOrders />,
+                },
+                {
+                    path: "my-orders/123",
+                    element: <OrderHistoryInfo />,
                 },
                 {
                     path: "login",

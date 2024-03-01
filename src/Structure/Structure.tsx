@@ -14,12 +14,14 @@ interface StructureProps {
     showInfo: boolean;
     setShowAuth: React.Dispatch<React.SetStateAction<boolean>>;
     setShowInfo: React.Dispatch<React.SetStateAction<boolean>>;
+    isUser: boolean
 }
 const Structure: React.FC<StructureProps> = ({
     showInfo,
     setShowInfo,
     setShowAuth,
     showAuth,
+    isUser
 }) => {
     return (
         <>
@@ -30,10 +32,12 @@ const Structure: React.FC<StructureProps> = ({
                         <HeaderOne
                             showAuth={showAuth}
                             setShowAuth={setShowAuth}
+                            isUser={isUser}
                         />
                         <HeaderTwo
                             showAuth={showAuth}
                             setShowAuth={setShowAuth}
+                            isUser={isUser}
                         />
                     </div>
                     <div className="w-full h-max mt-[7.5rem]">

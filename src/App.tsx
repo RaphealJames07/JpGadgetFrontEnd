@@ -36,8 +36,18 @@ import OrderHistoryInfo from "./Pages/Account/MyOrders/OrderHistoryInfo";
 const App = () => {
     const [showAuth, setShowAuth] = useState<boolean>(false);
     const [showInfo, setShowInfo] = useState<boolean>(false);
-    const isUser = true
+    const isUser = true;
     const router = createBrowserRouter([
+        {
+            path: "checkout",
+            element: (
+                <Checkout
+                    setShowAuth={setShowAuth}
+                    showAuth={showAuth}
+                    isUser={isUser}
+                />
+            ),
+        },
         {
             path: "",
             element: (
@@ -120,10 +130,7 @@ const App = () => {
                     path: "cart",
                     element: <Cart />,
                 },
-                {
-                    path: "checkout",
-                    element: <Checkout />,
-                },
+
                 {
                     path: "profile",
                     element: <MyProfle />,

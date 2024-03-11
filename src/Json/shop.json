@@ -1,0 +1,49 @@
+{
+  "meta_data": {
+    "number_of_pages": 1,
+    "page_index": 5,
+    "page_size": 10,
+    "total_count": 45
+  },
+  "data": [
+      {
+          "product_name": "Iphone 12 Pro Max",
+          "product_price": "200,000",
+          "product_price_slash": "250,000",
+          "product_mem": "256gb",
+          "product_type": "New",
+          "product_review": 8,
+          "product_star_ratings": 3,
+          "product_image": [1, 2, 3, 4, 5],
+          "is_favorite": true
+      }
+  ]
+},
+
+  JUST A NOTE TO DEVELOPER OF HOW THE SHOP WORKS DATA NEED TO BE STRUCTURED
+  BASED ON THE UI WE HAVE THE SHOP IS UNIQUE AND DYNAMIC RESPONDING TO QUERIES AND PARAMETERS
+  so the data needs to be filtered based on 5 query (type,price-range,color,brand,state)
+
+  1. TYPE: the type of product we have 6 type of products (phones,tablets,laptops,smartwatches,airpods,consoles,other gadgets) and then "all-products"as a type
+  So the first query let's say we have our base url for shop as "www.jpgadgets/api/shop/" and we make a query of endpoint as "www.jpgadgets/api/shop/?type={phones}" now the type may be any of the 6 products and when the type is passed in the get request the data should be corresponding to that type requested, if no type is passed let's say we have "www.jpgadgets/api/shop/" then the default data to get is "all-product". Please note that a query of "www.jpgadgets/api/shop/?type={all-product}" can still be passed and it should also be recognized as "www.jpgadgets/api/shop/" which is getting all products.
+
+  2. PRICE-RANGE: price range is another query that can be used to filter products and it takes in 2 value (min and max) so any value passed will be used to get products within that price range and not beyond or below, and if no products are within that range then an empty array is returned. E.G "www.jpgadgets/api/shop/?price={100,000-200,000}" means we are getting products from hundred thousand to two hundred thousand.
+
+  3. COLOR: pretty straight forward colors from red,white,black,grey,yellow,orange,blue
+
+  4. BRAND: now this brand varies you can get like phones for example, brands are apple,samsung,google pixel etc so when a brand is passed products matching that brand are fetched
+
+  5. STATE: pretty much simple state is either new or used so when the state is passed "www.jpgadgets/api/shop/?state={used}" get all used products.
+
+  while this may be well quoted PLEASE NOTE: that the query is in no order we can have a query like this "www.jpgadgets/api/shop/?color={red}?type={airpods}" meaning we need all red airpods OR like this "www.jpgadgets/api/shop/?state={new}?brand={samsung}" and this means we need all new samsung products 
+
+  so another thing to note is that if two or more querries are passed let's say 3 "www.jpgadgets/api/shop/?state={new}?brand={samsung}?color={white}" and in the database we have new samsung but no white that is two out of the 3 parameters are met please return an empty array and not the two valid ones all parameter passed must be found if one out of them is missing then return an empty array 
+
+  another thing to notice is the Sort By: feature (which will be implemented by the frontend tho) we have (featured,popularity,rating,newest-arrival,price: low to high, price: high to low) but we'll be needing some information from the data fetched in order to achieve the featured 
+
+  1. POPULARITY: so for the frontend to achieve that we need a popularity level for each product from maybe 1 to 5 or 10 so the higher the number the higher the popularity
+  2. RATING: the star ratings of each products from 1 star to 5 star
+  3. NEWEST-ARRIVAL: all products should have date that it was uploaded into the database so from there we can get and filter the products
+  4. PRICE: products obtained should all and must have price
+
+THE ABOVE SAMPLE DATA STRUCTURE IS JUST A SUMMARY MORE KEY AND VALUES ARE TO BE ADDED.

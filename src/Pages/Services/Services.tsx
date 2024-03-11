@@ -14,7 +14,7 @@ const Services = () => {
                     </p>
                     <div className="w-full h-max mt-5 flex flex-col gap-5">
                         <div className="w-full h-max flex phone:flex-col justify-between gap-8">
-                            <div className="w-1/4 phone:w-full h-36 p-3 flex flex-col gap-2 cursor-pointer divIncrease bg-white shadow-lg rounded">
+                            <div className="w-1/4 phone:w-full h-52 p-3 flex flex-col gap-4 cursor-pointer divIncrease bg-white shadow-lg rounded">
                                 <p className="text-base font-semibold text-[#128889]">
                                     Efficient Delivery
                                 </p>
@@ -25,7 +25,7 @@ const Services = () => {
                                     swiftly and without delay.
                                 </p>
                             </div>
-                            <div className="w-1/4 phone:w-full h-36 p-3 flex flex-col gap-2 cursor-pointer divIncrease bg-white shadow-lg rounded">
+                            <div className="w-1/4 phone:w-full h-52 p-3 flex flex-col gap-4 cursor-pointer divIncrease bg-white shadow-lg rounded">
                                 <p className="text-base font-semibold text-[#128889]">
                                     Live Chat Support
                                 </p>
@@ -37,7 +37,7 @@ const Services = () => {
                                     ensuring a seamless shopping experience.
                                 </p>
                             </div>
-                            <div className="w-1/4 phone:w-full h-36 p-3 flex flex-col gap-2 cursor-pointer divIncrease bg-white shadow-lg rounded">
+                            <div className="w-1/4 phone:w-full h-52 p-3 flex flex-col gap-4 cursor-pointer divIncrease bg-white shadow-lg rounded">
                                 <p className="text-base font-semibold text-[#128889]">
                                     Easy Payment
                                 </p>
@@ -49,7 +49,7 @@ const Services = () => {
                                     hassle-free and enjoyable.
                                 </p>
                             </div>
-                            <div className="w-1/4 phone:w-full h-36 p-3 flex flex-col gap-2 cursor-pointer divIncrease bg-white shadow-lg rounded">
+                            <div className="w-1/4 phone:w-full h-52 p-3 flex flex-col gap-4 cursor-pointer divIncrease bg-white shadow-lg rounded">
                                 <p className="text-base font-semibold text-[#128889]">
                                     Best Offers
                                 </p>
@@ -62,7 +62,7 @@ const Services = () => {
                             </div>
                         </div>
                         <div className="w-full h-max flex phone:flex-col justify-between gap-8">
-                            <div className="w-1/4 phone:w-full h-36 p-3 flex flex-col gap-2 cursor-pointer divIncrease bg-white shadow-lg rounded">
+                            <div className="w-1/4 phone:w-full h-52 p-3 flex flex-col gap-4 cursor-pointer divIncrease bg-white shadow-lg rounded">
                                 <p className="text-base font-semibold text-[#128889]">
                                     Return Policy
                                 </p>
@@ -74,7 +74,7 @@ const Services = () => {
                                     every purchase.
                                 </p>
                             </div>
-                            <div className="w-1/4 phone:w-full h-36 p-3 flex flex-col gap-2 cursor-pointer divIncrease bg-white shadow-lg rounded">
+                            <div className="w-1/4 phone:w-full h-52 p-3 flex flex-col gap-4 cursor-pointer divIncrease bg-white shadow-lg rounded">
                                 <p className="text-base font-semibold text-[#128889]">
                                     Hybrid Shopping (In-store or Online)
                                 </p>
@@ -86,7 +86,7 @@ const Services = () => {
                                     your preferences and convenience.
                                 </p>
                             </div>
-                            <div className="w-1/4 phone:w-full h-36 p-3 flex flex-col gap-2 cursor-pointer divIncrease bg-white shadow-lg rounded">
+                            <div className="w-1/4 phone:w-full h-52 p-3 flex flex-col gap-4 cursor-pointer divIncrease bg-white shadow-lg rounded">
                                 <p className="text-base font-semibold text-[#128889]">
                                     Order Tracker
                                 </p>
@@ -98,7 +98,7 @@ const Services = () => {
                                     reliability in your shopping experience.
                                 </p>
                             </div>
-                            <div className="w-1/4 phone:w-full h-36 p-3 flex flex-col gap-2 cursor-pointer divIncrease bg-white shadow-lg rounded">
+                            <div className="w-1/4 phone:w-full h-52 p-3 flex flex-col gap-4 cursor-pointer divIncrease bg-white shadow-lg rounded">
                                 <p className="text-base font-semibold text-[#128889]">
                                     Cashback Promo
                                 </p>

@@ -2,7 +2,7 @@ import {MdOutlineDelete} from "react-icons/md";
 import emptyCart from "../../assets/Emptycart.gif";
 
 const Cart = () => {
-    const cart = [];
+    const cart = [1,2,3];
     return (
         <>
             <div className="w-full h-max px-44 phone:px-5 flex flex-col items-center justify-center py-5 gap-5">

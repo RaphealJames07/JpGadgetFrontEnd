@@ -31,17 +31,39 @@ import SpeakerCollection from "./Pages/Collection/Speaker/SpeakerCollection";
 import SmartWatchCollection from "./Pages/Collection/SmartWatch/SmartWatchCollection";
 import ConsolesCollection from "./Pages/Collection/Consoles/ConsolesCollection";
 import OrderHistoryInfo from "./Pages/Account/MyOrders/OrderHistoryInfo";
+import PaySuccess from "./Pages/Checkout/PaySuccess";
+import PayFailed from "./Pages/Checkout/PayFailed";
 // import 'swiper/css/swiper.css'
 
 const App = () => {
     const [showAuth, setShowAuth] = useState<boolean>(false);
     const [showInfo, setShowInfo] = useState<boolean>(false);
-    const isUser = true;
+    const isUser = false;
     const router = createBrowserRouter([
         {
             path: "checkout",
             element: (
                 <Checkout
+                    setShowAuth={setShowAuth}
+                    showAuth={showAuth}
+                    isUser={isUser}
+                />
+            ),
+        },
+        {
+            path: "payment-success",
+            element: (
+                <PaySuccess
+                    setShowAuth={setShowAuth}
+                    showAuth={showAuth}
+                    isUser={isUser}
+                />
+            ),
+        },
+        {
+            path: "payment-failed",
+            element: (
+                <PayFailed
                     setShowAuth={setShowAuth}
                     showAuth={showAuth}
                     isUser={isUser}

@@ -1,0 +1,20 @@
+{
+    "product_name": "Iphone 12 Pro Max",
+    "product_mem": "64gb",
+    "product_image": [1, 2, 3, 4, 5],
+    "product_price": "100000",
+    "product_type": "Uk Used",
+    "product_price_slash": "120000",
+    "product_star_ratings": 4,
+    "color": ["red", "blue", "black", "white", "yellow"],
+    "product_description": "Faded short sleeves t-shirt with high neckline. Soft and stretchy material for a comfortable fit. Accessorize with a straw hat and you're ready for summer!",
+    "product_description_full": "Faded short sleeves t-shirt with high neckline. Soft and stretchy material for a comfortable fit. Accessorize with a straw hat and you're ready for summer! Faded short sleeves t-shirt with high neckline. Soft and stretchy material for a comfortable fit. Accessorize with a straw hat and you're ready for summer!",
+    "specifications": [1, 2, 3, 4, 5],
+    "quantity": 30,
+    "quantity_red": 5,
+    "quantity_blue": 5,
+    "quantity_black": 5,
+    "quantity_white": 5,
+    "quantity_yellow": 5,
+    "brand": "Apple"
+}

@@ -1,0 +1,15 @@
+{
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "test@gmail.com",
+    "phone_number": "08123456789",
+    "address": [
+        "No 10 Somewhere in lagos nigeria Ikeja Lagos Nigeria",
+        "No 10 Somewhere in lagos nigeria Ikeja Lagos Nigeria",
+        "No 10 Somewhere in lagos nigeria Ikeja Lagos Nigeria"
+    ],
+    "is_admin": false,
+    "is_subscribed": false,
+    "is_verified": false,
+    "profile_picture": "image"
+}

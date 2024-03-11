@@ -1,0 +1,21 @@
+{
+    "meta_data": {
+        "number_of_pages": 1,
+        "page_index": 1,
+        "page_size": 20,
+        "total_count": 10
+    },
+    "data": [
+        {
+            "product_name": "Apple IPad 9th Gen 10.2 Wi-Fi Cellular",
+            "product_price": "200,000",
+            "product_mem": "256gb",
+            "product_price_slash": "250,000",
+            "product_type": "New",
+            "product_review": 8,
+            "product_star_ratings": 3,
+            "product_image": [1, 2, 3, 4, 5],
+            "is_favorite": true
+        }
+    ]
+}

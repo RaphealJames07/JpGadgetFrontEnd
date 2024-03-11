@@ -86,10 +86,11 @@ const HeaderOne: React.FC<Props> = ({showAuth, setShowAuth, isUser}) => {
                             <>
                                 {" "}
                                 <p
-                                    className="transition-all duration-300 cursor-pointer hover:text-gray-300 "
+                                    className="transition-all duration-300 cursor-pointer hover:text-gray-300 flex items-center gap-3"
                                     onClick={() => setShowAuth(!showAuth)}
                                 >
                                     Account
+                                    <FaCaretDown className="transition-all duration-300 " />
                                 </p>
                                 <div
                                     // id="user-notification"

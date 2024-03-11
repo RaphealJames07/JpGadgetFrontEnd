@@ -1,0 +1,10 @@
+[
+    {
+        "product_name": "Iphone 12 Pro Max",
+        "product_spec": "64gb",
+        "product_image": [1, 2, 3, 4, 5],
+        "product_price": "100000",
+        "product_star_ratings": 4
+        
+    }
+]

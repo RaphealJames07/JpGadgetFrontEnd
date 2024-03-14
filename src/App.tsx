@@ -51,6 +51,27 @@ const App = () => {
             ),
         },
         {
+            path: "register",
+            element: <Register />,
+        },
+        {
+            path: "login",
+            element: <Login />,
+        },
+
+        {
+            path: "verify",
+            element: <Verify />,
+        },
+        {
+            path: "reset-password",
+            element: <ResetPassword />,
+        },
+        {
+            path: "forget-password",
+            element: <ForgetPassword />,
+        },
+        {
             path: "payment-success",
             element: (
                 <PaySuccess
@@ -165,26 +186,7 @@ const App = () => {
                     path: "my-orders/123",
                     element: <OrderHistoryInfo />,
                 },
-                {
-                    path: "login",
-                    element: <Login />,
-                },
-                {
-                    path: "register",
-                    element: <Register />,
-                },
-                {
-                    path: "verify",
-                    element: <Verify />,
-                },
-                {
-                    path: "reset-password",
-                    element: <ResetPassword />,
-                },
-                {
-                    path: "forget-password",
-                    element: <ForgetPassword />,
-                },
+
                 {
                     path: "test",
                     element: <Test />,

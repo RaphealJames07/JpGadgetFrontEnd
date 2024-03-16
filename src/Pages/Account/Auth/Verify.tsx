@@ -1,9 +1,11 @@
 import {useRef, useState} from "react";
 // import "./Verify.css";
 import {Modal} from "antd";
-import {LoadingOutlined} from "@ant-design/icons";
+import {SpinnerCircular} from "spinners-react";
 import {useNavigate, useParams} from "react-router";
 import logo from "../../../assets/Logo1.png";
+import axios from "axios";
+import {toast} from "react-hot-toast";
 
 const Verify = () => {
     const nav = useNavigate();
@@ -145,32 +147,93 @@ const Verify = () => {
     const otp = `${inputValue1}${inputValue2}${inputValue3}${inputValue4}${inputValue5}`;
 
     const [loading, setLoading] = useState<boolean>(false);
-    console.log(setLoading);
     const [inputErr, setInputErr] = useState<boolean>(true);
     const {token} = useParams();
     const {email} = useParams();
-    console.log(token);
+    const navigate = useNavigate();
     const data = {otp};
-    const url = ``;
-    console.log(data, url, email);
+    const url = `https://jp-gadget.onrender.com/api/v1/user/verify/${token}`;
+    // console.log(data, url, email);
 
-    const HandleVerify = () => {};
+    const HandleVerify = () => {
+        const loadingId = toast.loading("Registering...");
+        setInputErr(true);
+        setLoading(true);
+        axios
+            .post(url, data)
+            .then((response) => {
+                console.log(response);
+                setLoading(false);
+                setInputErr(false);
+                toast.dismiss(loadingId);
+                toast.success(response?.data?.message, {duration: 4000});
+                setTimeout(() => {
+                    navigate("/login");
+                }, 4000);
+            })
+            .catch((error) => {
+                console.log(error);
+                toast.dismiss(loadingId);
+                if (error?.response?.data?.message === "Invalid OTP") {
+                    toast.error("OTP expired please request a new OTP");
+                } else {
+                    toast.error(error?.response?.data?.message);
+                }
+                setLoading(false);
+                setInputErr(false);
+            });
+    };
 
     const handleBackTo = () => {
         nav("/login");
     };
 
-    const testEmail = "test@gmail.com";
-
-    function hideEmail(testEmail: string) {
-        const [username, domain] = testEmail.split("@");
+    function hideEmail(email: any) {
+        const [username, domain] = email.split("@");
         const hiddenUsername =
             username.slice(0, 2) + "*".repeat(username.length - 2);
         const maskedEmail = `${hiddenUsername}@${domain}`;
         return maskedEmail;
     }
 
-    const maskedEmail = hideEmail(testEmail);
+    const maskedEmail = hideEmail(email);
+
+    const handleResendOtp = () => {
+        const loadingId = toast.loading("Resending OTP...");
+        const url =
+            "https://jp-gadget.onrender.com/api/v1/user/resend-verification-otp";
+        const data = {
+            email: email,
+        };
+        axios
+            .post(url, data)
+            .then((response) => {
+                console.log(response);
+                localStorage.setItem(
+                    "jpGadgetVerifyToken",
+                    response?.data?.token
+                );
+                toast.dismiss(loadingId);
+                toast.success(
+                    `${response?.data?.message}, check your mail for OTP code`,
+                    {duration: 4000}
+                );
+                setTimeout(() => {
+                    const verifyEmail = localStorage.getItem(
+                        "jpGadgetVerifyEmail"
+                    );
+                    const verifyToken = localStorage.getItem(
+                        "jpGadgetVerifyToken"
+                    );
+                    navigate(`/verify/${verifyEmail}/${verifyToken}`);
+                }, 5000);
+            })
+            .catch((error) => {
+                console.log(error);
+                toast.dismiss(loadingId);
+                toast.error(error?.response?.data?.message);
+            });
+    };
 
     return (
         <>
@@ -214,19 +277,14 @@ const Verify = () => {
                         ))}
                     </div>
                     <button
-                        className="bg-[#008081] w-40 h-10 rounded text-white text-base cursor-pointer border-none disabled:bg-[#7dcdcd] disabled:cursor-not-allowed"
-                        onClick={() => HandleVerify}
+                        className="bg-[#008081] w-40 h-10 rounded text-white text-base cursor-pointer border-none disabled:bg-[#7dcdcd] disabled:cursor-not-allowed flex items-center justify-center"
+                        onClick={HandleVerify}
                         disabled={inputErr}
                     >
                         {loading ? (
-                            <LoadingOutlined
-                                style={{
-                                    fontSize: 24,
-                                }}
-                                spin
-                            />
+                            <SpinnerCircular size={25} color="white" />
                         ) : (
-                            "Verify"
+                            "VERIFY"
                         )}
                     </button>
                     <p className="text-center">
@@ -237,6 +295,7 @@ const Verify = () => {
                                 color: "#3F51B5",
                                 cursor: "pointer",
                             }}
+                            onClick={handleResendOtp}
                         >
                             Resend a new code.
                         </span>

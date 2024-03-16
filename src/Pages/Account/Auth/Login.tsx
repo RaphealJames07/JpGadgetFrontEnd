@@ -34,7 +34,7 @@ const Login = () => {
                     </div>
 
                     <button className="w-full h-10 bg-[#008081] rounded text-white font-semibold ">
-                        REGISTER
+                        LOGIN
                     </button>
                     <div className="w-full h-max flex justify-between text-sm">
                         <NavLink to={"/forget-password"}>

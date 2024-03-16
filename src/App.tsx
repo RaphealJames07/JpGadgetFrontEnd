@@ -60,7 +60,7 @@ const App = () => {
         },
 
         {
-            path: "verify",
+            path: "verify/:email/:token",
             element: <Verify />,
         },
         {

@@ -2,6 +2,7 @@ import {useState} from "react";
 import { HiOutlineHeart } from "react-icons/hi";
 import { ImEye } from "react-icons/im";
 import {TbStar, TbStarFilled} from "react-icons/tb";
+import iphone from '../../../assets/Iphone_12_test_img/Gold_1.webp'
 
 interface Props {
   setShowInfo: React.Dispatch<React.SetStateAction<boolean>>;
@@ -157,7 +158,7 @@ const HomeShopTwo: React.FC<Props> = ({setShowInfo}) => {
                                             key={index}
                                         >
                                             <div className="w-[40%] phone:w-full h-max flex flex-col items-center p-2 gap-2">
-                                                <div className="w-full h-28 bg-indigo-300 relative">
+                                                <div className="w-full h-28 bg-white p-2 relative">
                                                     <div className="w-8 h-12 absolute top-1 right-0 flex justify-between flex-col items-center">
                                                         <span className="cursor-pointer  flex items-center justify-center">
                                                             <ImEye
@@ -172,9 +173,9 @@ const HomeShopTwo: React.FC<Props> = ({setShowInfo}) => {
                                                         </span>
                                                     </div>
                                                     <img
-                                                        src={""}
+                                                        src={iphone}
                                                         alt=""
-                                                        
+                                                        className="w-full h-full object-contain"
                                                     />
                                                 </div>
                                                 <div className="w-full flex items-center justify-center gap-1">

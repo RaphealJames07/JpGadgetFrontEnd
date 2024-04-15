@@ -33,12 +33,13 @@ import ConsolesCollection from "./Pages/Collection/Consoles/ConsolesCollection";
 import OrderHistoryInfo from "./Pages/Account/MyOrders/OrderHistoryInfo";
 import PaySuccess from "./Pages/Checkout/PaySuccess";
 import PayFailed from "./Pages/Checkout/PayFailed";
+import Product from "./Pages/Product/Product";
 // import 'swiper/css/swiper.css'
 
 const App = () => {
     const [showAuth, setShowAuth] = useState<boolean>(false);
     const [showInfo, setShowInfo] = useState<boolean>(false);
-    const isUser = false;
+    const isUser = true;
     const router = createBrowserRouter([
         {
             path: "checkout",
@@ -112,6 +113,10 @@ const App = () => {
                 {
                     path: "shop",
                     element: <Shop />,
+                },
+                {
+                    path: "product",
+                    element: <Product />,
                 },
                 {
                     path: "collections",

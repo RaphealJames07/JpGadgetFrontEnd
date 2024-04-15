@@ -1,9 +1,15 @@
 import {CiCircleInfo} from "react-icons/ci";
 import iphone from "../assets/iphone.png";
 import {RiDeleteBinLine} from "react-icons/ri";
+import {useNavigate} from "react-router";
 // import {NavLink} from "react-router-dom";
 
-const SideCart = () => {
+interface Props {
+    setOpenCart: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const SideCart: React.FC<Props> = ({setOpenCart}) => {
+    const nav = useNavigate();
     return (
         <>
             <div className="w-full h-[90%] py-2 rounded flex flex-col justify-between">
@@ -142,10 +148,19 @@ const SideCart = () => {
                             taxes and shipping fees calculated at checkout!
                         </p>
                         <div className="w-full h-10 flex items-center justify-between ">
-                            <button className="w-[48%] h-full py-2 bg-black rounded font-medium text-white" >
+                            <button
+                                className="w-[48%] h-full py-2 bg-black rounded font-medium text-white"
+                                onClick={() => {
+                                    nav("/cart");
+                                    setOpenCart(false);
+                                }}
+                            >
                                 YOUR CART
                             </button>
-                            <button className="w-[48%] h-full py-2 bg-[#ffec00] font-medium">
+                            <button
+                                className="w-[48%] h-full py-2 bg-[#ffec00] font-medium"
+                                onClick={() => nav("/checkout")}
+                            >
                                 CHECKOUT
                             </button>
                         </div>

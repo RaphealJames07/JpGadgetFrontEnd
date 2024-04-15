@@ -25,6 +25,10 @@
     overflow: hidden !important;
 }
 
+.viewproductdetailrightbox{
+    width: calc(100% - 20rem);
+  }
+
 .heroBg1B {
     background-image: url(./assets/herobgimg1B.webp);
     background-size: cover;

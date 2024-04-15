@@ -207,7 +207,7 @@ const HeaderTwo: React.FC<Props> = ({showAuth, setShowAuth, isUser}) => {
             >
                 <div className="w-full h-[90vh] p-3">
                     <Carousel />
-                    <SideCart />
+                    <SideCart setOpenCart={setOpenCart} />
                 </div>
             </Drawer>
             <Drawer

@@ -1,8 +1,10 @@
 import {MdOutlineDelete} from "react-icons/md";
 import emptyCart from "../../assets/Emptycart.gif";
+import {useNavigate} from "react-router";
 
 const Cart = () => {
-    const cart = [1,2,3];
+    const cart = [1, 2, 3];
+    const nav = useNavigate();
     return (
         <>
             <div className="w-full h-max px-44 phone:px-5 flex flex-col items-center justify-center py-5 gap-5">
@@ -14,9 +16,15 @@ const Cart = () => {
                     {cart.length === 0 ? (
                         <>
                             <div className="w-full h-[50vh] flex items-center justify-center flex-col gap-4">
-                                <img src={emptyCart} alt="" className="w-60 h-60" />
+                                <img
+                                    src={emptyCart}
+                                    alt=""
+                                    className="w-60 h-60"
+                                />
                                 <p className="text-xl">Your Cart is empty</p>
-                                <button className="w-max h-max px-4 py-2 bg-[#008081] rounded text-white">SHOP NOW</button>
+                                <button className="w-max h-max px-4 py-2 bg-[#008081] rounded text-white">
+                                    SHOP NOW
+                                </button>
                             </div>
                         </>
                     ) : (
@@ -233,7 +241,10 @@ const Cart = () => {
                                             Shipping fee to be included at
                                             checkout
                                         </p>
-                                        <button className="w-68 h-10 bg-[#008081] text-white rounded-md">
+                                        <button
+                                            className="w-68 h-10 bg-[#008081] text-white rounded-md"
+                                            onClick={() => nav("/checkout")}
+                                        >
                                             Checkout
                                         </button>
                                         <button className="w-68 h-10 border-2 text-[#008081] border-[#008081] rounded-md">

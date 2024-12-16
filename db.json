@@ -1,0 +1,196 @@
+[
+    {
+        "category": "consoles",
+        "name": "Sony Playstation 5",
+        "price": 500000,
+        "images": [
+            "/src/assets/dbImages/Ps4/PS4_1.webp",
+            "/src/assets/dbImages/Ps4/PS4_2.webp"
+        ],
+
+        "description": "This is the latest PlayStation model",
+        "rating": 4.5,
+        "reviews": 100,
+        "id": 1,
+        "brand": "Sony",
+        "color": "White"
+    },
+    {
+        "category": "consoles",
+        "name": "Sony Playstation 4",
+        "price": 200000,
+        "images": [
+            "/src/assets/dbImages/Ps5/PS_1.webp",
+            "/src/assets/dbImages/Ps5/PS_2.webp"
+        ],
+
+        "description": "This is the latest PlayStation model",
+        "rating": 4.5,
+        "reviews": 100,
+        "id": 1,
+        "brand": "Sony",
+        "color": "White"
+    },
+    {
+        "category": "airpods",
+        "name": "Apple Airpods Pro Headset",
+        "price": 90000,
+        "images": [
+            "/src/assets/dbImages/Airpod2/white_1.webp",
+            "/src/assets/dbImages/Airpod2/white_2.webp",
+            "/src/assets/dbImages/Airpod2/white_3.webp",
+            "/src/assets/dbImages/Airpod2/white_1.webp"
+        ],
+
+        "description": "This is the latest Airpod model",
+        "rating": 4.5,
+        "reviews": 100,
+        "id": 1,
+        "brand": "Apple",
+        "color": "Silver"
+    },
+    {
+        "category": "airpods",
+        "name": "Apple Max Headset",
+        "price": 120000,
+        "images": [
+            "/src/assets/dbImages/Airpod1/Grey_1.webp",
+            "/src/assets/dbImages/Airpod1/Grey_2.webp",
+            "/src/assets/dbImages/Airpod1/Grey_3.webp",
+            "/src/assets/dbImages/Airpod1/Grey_4.webp"
+        ],
+
+        "description": "This is the latest Headset model",
+        "rating": 4.5,
+        "reviews": 100,
+        "id": 1,
+        "brand": "Apple",
+        "color": "Silver"
+    },
+    {
+        "category": "tablets",
+        "name": "Apple Ipad Pro",
+        "price": 300000,
+        "images": [
+            "/src/assets/dbImages/ipad1/Silver_1.webp",
+            "/src/assets/dbImages/ipad1/Silver_2.webp",
+            "/src/assets/dbImages/ipad1/Silver_3.webp",
+            "/src/assets/dbImages/ipad1/Silver_4.webp"
+        ],
+
+        "description": "This is the latest Ipad model",
+        "rating": 4.5,
+        "reviews": 100,
+        "id": 1,
+        "brand": "Apple",
+        "color": "Silver"
+    },
+    {
+        "category": "tablets",
+        "name": "Apple Ipad Mini",
+        "price": 422300,
+        "images": [
+            "/src/assets/dbImages/ipad2/Pink_1.webp",
+            "/src/assets/dbImages/ipad2/Pink_2.webp",
+            "/src/assets/dbImages/ipad2/Pink_3.webp",
+            "/src/assets/dbImages/ipad2/Pink_4.webp"
+        ],
+
+        "description": "This is the latest Ipad model",
+        "rating": 4.5,
+        "reviews": 100,
+        "id": 1,
+        "brand": "Apple",
+        "color": "Silver"
+    },
+    {
+        "category": "phones",
+        "name": "IPhone 13",
+        "price": 900000,
+        "images": [
+            "/src/assets/dbImages/iphone13/Blue_1.webp",
+            "/src/assets/dbImages/iphone13/Blue_2.webp",
+            "/src/assets/dbImages/iphone13/Blue_3.webp",
+            "/src/assets/dbImages/iphone13/Blue_4.webp"
+        ],
+
+        "description": "This is the latest iPhone model",
+        "rating": 4.5,
+        "reviews": 100,
+        "id": 1,
+        "brand": "Apple",
+        "color": "Blue"
+    },
+    {
+        "category": "phones",
+        "name": "IPhone 12",
+        "price": 750000,
+        "images": [
+            "/src/assets/dbImages/iphone12/Red_1.webp",
+            "/src/assets/dbImages/iphone12/Red_2.webp",
+            "/src/assets/dbImages/iphone12/Red_3.webp",
+            "/src/assets/dbImages/iphone12/Red_4.webp"
+        ],
+
+        "description": "This is the latest iPhone model",
+        "rating": 4.5,
+        "reviews": 100,
+        "id": 2,
+        "brand": "Apple",
+        "color": "Red"
+    },
+    {
+        "category": "phones",
+        "name": "IPhone 11",
+        "price": 520000,
+        "images": [
+            "/src/assets/dbImages/iphone11/White_1.webp",
+            "/src/assets/dbImages/iphone11/White_2.webp",
+            "/src/assets/dbImages/iphone11/White_3.webp",
+            "/src/assets/dbImages/iphone11/White_5.webp",
+            "/src/assets/dbImages/iphone11/White_6.webp"
+        ],
+
+        "description": "This is the latest iPhone model",
+        "rating": 4.5,
+        "reviews": 100,
+        "id": 3,
+        "brand": "Apple",
+        "color": "White"
+    },
+    {
+        "category": "phones",
+        "name": "IPhone 14",
+        "price": 1120000,
+        "images": [
+            "/src/assets/dbImages/iphone14/Yellow_1.webp",
+            "/src/assets/dbImages/iphone14/Yellow_2.webp",
+            "/src/assets/dbImages/iphone14/Yellow_3.webp",
+            "/src/assets/dbImages/iphone14/Yellow_4.webp"
+        ],
+
+        "description": "This is the latest iPhone model",
+        "rating": 4.5,
+        "reviews": 100,
+        "id": 4,
+        "brand": "Apple",
+        "color": "Yellow"
+    },
+    {
+        "category": "phones",
+        "name": "IPhone 15",
+        "price": 1500000,
+        "images": [
+            "/src/assets/dbImages/iphone15/Pink_1.webp",
+            "/src/assets/dbImages/iphone15/Pink_2.webp",
+            "/src/assets/dbImages/iphone15/Pink_4.webp"
+        ],
+
+        "description": "This is the latest iPhone model",
+        "rating": 4.5,
+        "reviews": 100,
+        "id": 5,
+        "brand": "Apple",
+        "color": "Pink"
+    }
+]
